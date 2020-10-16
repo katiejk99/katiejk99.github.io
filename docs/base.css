@@ -224,4 +224,11 @@
         text-decoration: none;
     }
 
+    ul.linklist li:hover {
+        background-color:#cccccc;
+    }
     
+    .container {
+        padding-top:75%;
+        width:100%;
+    }
