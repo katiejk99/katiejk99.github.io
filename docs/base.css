@@ -4,6 +4,7 @@
         padding: 0;
         font-family: 'Oswald', sans-serif;
         background-color: #fff3e6;
+        font-size:16px;
     }
 
     div.main {
@@ -25,46 +26,51 @@
     img.two {
         width: 400px;
     }
-
-    ul.navbar {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
+    #proj {
+        margin-left:150px;
+    }
+    .navbar {
         overflow: hidden;
         background-color: #61d2ff;
         position: fixed; /* Set the navbar to fixed position */
-        top: 0; /* Position the navbar at the top of the page */
+        /* top: 0; Position the navbar at the top of the page */
         width: 100%; /* Full width */
+        
+
     }
 
-    li.navitem {
-        display: inline;
-        float: left;
-        position:relative;
-    }
-
-    li.navitem:first-child {
+    
+    .navbar a:first-child {
         font-family: 'Amatic SC', cursive;
         font-size: 2em;
-    }
-    li.navitem:first-child a {
-        display: block;
         color: white;
         text-align: center;
-        padding:5.5px 45px 5.5px 45px ;
+        padding:12px 45px 12px 45px ;
         text-decoration: none;
         margin-left:150px;
     }
 
-    li.navitem a {
-        display: block;
+    .navbar .dropdown a {
+        margin-right:150px;
+        float:right;
+        font-family: 'Oswald', sans-serif;
         color: white;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
+        display: inline;
+        font-size:16px;
     }
 
-    li.navitem a:hover:not(.active) {
+    .navbar a {
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        display: inline;
+    }
+
+    .navbar a:hover:not(.active) {
         background-color: #4dccff;
     }
 
@@ -119,26 +125,31 @@
     #smoke {
         top:7.5em;
         background-color: #ffa94d;
+
     }
 
     #lunch {
         top:10em;
         background-color: #ffb566;
+
     }
 
     #opioid {
         top:12.5em;
         background-color: #ffc180;
+
     }
 
     #roll {
         top:15em;
         background-color: #ffce99;
+
     }
 
     #engineer {
         top:17.5em;
         background-color:#ffdab3;
+
     }
 
     .page-title {
@@ -227,9 +238,37 @@
     ul.linklist li:hover {
         background-color:#cccccc;
     }
-    
-    .container {
-        padding-top:75%;
-        width:100%;
+
+    .dropdown .dropbtn {
+        margin-right:150px;
+        cursor: pointer;
+        font-size: 16px;  
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
         
+
+    }
+    
+    .dropdown .dropdown-content {
+        display: none;
+        position:absolute;
+        min-width:200px;
+        z-index: 1;
+        float:right;
+
+
+    }
+
+    .show {
+        display:block;
+    }
+
+    .dropdown {
+        float: right;
+        overflow:hidden;
+
     }

@@ -8,20 +8,38 @@
 </head>
 
 <body>
-    <div>
-        <ul class="navbar">
-            <li class="navitem">
-                <a class="active" href="index.html" title="Main page">K a t i e   K i m</a>
-            </li>
-            <li class="navitem"  style="margin-left:150px;">
-                <a href="projects.html" title="Projects">Projects</a>
-            </li>
-            <li class="navitem">
-                <a href="resume.html" title="Resume">Resume</a>
-            </li>
-            
+    <div class="navbar">
+        <a class="active" href="index.html" title="Main page">K a t i e   K i m</a>
+        <a  href="projects.html" title="Projects" id="proj">Projects</a>
+        <a href="resume.html" title="Resume" >Resume</a>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="showSpotify()">Spotify <i class="fa fa-caret-down"></i> </button>
+            <div class="dropdown-content" id="spotify">
+                <iframe src="https://open.spotify.com/embed/playlist/45qG4cdbD2Ln1HyXZR9B5f" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+        </div>
+        
 
-        </ul>
+
+
+       
+        <script>
+
+            function showSpotify() {
+
+                document.getElementById("spotify").classList.toggle("show");
+            }
+
+            window.onclick = function(e) {
+                if (!e.target.matches(".dropbtn")) {
+                    var drop = document.getElementById("spotify");
+                    if (drop.classList.contains("show")) {
+                        drop.classList.remove("show");
+                    }
+                }
+                
+            }
+        </script>
     </div>
     
     <div class="page-title">
