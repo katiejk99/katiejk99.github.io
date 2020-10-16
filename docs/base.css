@@ -112,32 +112,32 @@
 
     #dod {
         top:4em;
-        background-color:#ffa94d;
+        background-color: #ff9c33;
     }
 
     #smoke {
         top:6.5em;
-        background-color:#ffb566;
+        background-color: #ffa94d;
     }
 
     #lunch {
         top:9em;
-        background-color: #ffc180;
+        background-color: #ffb566;
     }
 
     #opioid {
         top:11.5em;
-        background-color: #ffce99;
+        background-color: #ffc180;
     }
 
     #roll {
         top:14em;
-        background-color: #ffdab3;
+        background-color: #ffce99;
     }
 
     #engineer {
         top:16.5em;
-        background-color:#ffe6cc;
+        background-color:#ffdab3;
     }
 
     .page-title {
