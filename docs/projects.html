@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Oswald:wght@300&display=swap" rel="stylesheet" />
+    <title>Katie Kim</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="base.css" media="screen" />
+</head>
+
+<body>
+    <div>
+        <ul class="navbar">
+            <li class="navitem">
+                <a href="index.html" title="Main page">K a t i e   K i m</a>
+            </li>
+            <li class="navitem" style="margin-left:150px;">
+                <a href="resume.html" title="Resume">Resume</a>
+            </li>
+            <li class="navitem">
+                <a class="active" href="projects.html" title="Projects">Projects</a>
+            </li>
+
+        </ul>
+    </div>
+    <div id="sidenav" class="sidenav">
+        <a href="#drone" id="dod">Drone on Demand</a>
+        <a href="#sim" id="smoke">2D Smoke Simulator</a>
+        <a href="#lunchable" id="lunch">Lunchable App</a>
+        <a href="#crisis" id="opioid">Opioid Crisis</a>
+        <a href="#call" id="roll">Roll Call</a>
+        <a href="#activism" id="engineer">Engineering Activism</a>
+    </div>
+    <div class="page-title" width="100%">
+        <h1>Projects</h1>
+        <div id="drone" class="project1">
+            <div class="content-title">
+                <h3>Drone on Demand</h3>
+                <p>Fall 2020 | United Kingdom | Product Development at Berkeley consulting for HeroTech8</p>
+            </div>
+            <hr />
+            <p>
+                The <a href="https://www.pdatberkeley.com/">PDAB</a> consulting team is working with <a href="https://www.herotech8.com/">HeroTech8</a>, a UK-based startup that provides Drone in a Box services to their clients, this semester 
+                to build a demo app for the Drone on Demand service, an Uber-like service where users are able to call for a drone to take some footages in a given area. 
+
+            </p>
+        </div>
+
+        <div id="sim" class="project1">
+            <div class="content-title">
+                <h3>2D Smoke Simulator</h3>
+                <p>Summer 2020 | Berkeley, CA | CS184: Foundations of Computer Graphics</p>
+            </div>
+            <hr />
+            <p>
+                For the final project of CS184, my teammates and I built a web-based 2D smoke simulator using WebGL, and Three.js that modeled smoke as a fluid system with 0 velocity according to the Navier-Stokes equations.
+                We included a gui to allow users to visualize the smoke based on various quantities like colour, density, and temperature that applies buoyant forces to this fluid. 
+                Another feature included a visualization of all the internal values computed at each time step. 
+            </p>
+        </div>
+
+        <div id="lunchable" class="project1">
+            <div class="content-title">
+                <h3>Lunchable App</h3>
+                <p>Spring 2020 | Berkeley, CA | Product Development at Berkeley consulting for Lunchable, Inc. </p>
+            </div>
+            <hr />
+            <p>
+                I led the PDAB consulting team for the Spring 2020 semester, where we provided 2 different products for Lunchable, Inc.
+                <ul>
+                    <li align="justify">
+                        The first was integrating a chat feature in the Lunchable mobile app, which matched users and gave them a time and place to meet based on their location preferences and availability.
+                        The mobile app's tech stack included Flutter and MongoDB.
+                    </li>
+                    <li style="padding-top:10px;" align="justify">
+                        The second project that I worked on was providing a weekly matching service for various communities during the 2020 COVID19 shelter-in-place order.
+                        We processed thousands of data points from people who signed up and their preferences.
+                        I then wrote a DP algorithm in Python to generate matches of pairs and group of 4s.
+                        Lastly, we automated Google Meet and Calendar event generation and sent match invitation emails to participants using Sendgrid.
+                    </li>
+                    
+                </ul>
+                
+            </p>
+        </div>
+
+
+        <div id="crisis" class="project1">
+            <div class="content-title">
+                <h3>Opioid Crisis</h3>
+                <p>Fall 2019 | Berkeley, CA | Political Computer Science @ Berkeley</p>
+            </div>
+            <hr>
+            <p>
+                Inpired by Hasan Minhaj's <i>The Patriot Act</i>, I led a project team at PCS to research the policies surrounding the opioid crisis around the world. 
+                We were interested in policies that were implemented to combat the opioid crisis, as well as policies with loopholes that led to the worsening crisis. 
+                We found some interesting historical and ongoing relationships between various countries that involved 
+                The research was accompanied by weekly write-ups on specific drugs that posed a high risk of abuse as well as policies that corresponded to the drugs in question. 
+                
+            </p>
+        </div> 
+
+        <div id="call" class="project1">
+            <div class="content-title">
+                <h3>Roll Call</h3>
+                <p>Spring 2019 | Berkeley, CA | Political Computer Science @ Berkeley</p>
+            </div>
+            <hr>
+            <p>
+                The goal of this project was to algorithmically find voting blocs within the US Congress. 
+                We treated the Congress as a network graph&mdash;nodes representing the Congressmen, and edges representing connectivity between any 2 Congressmen.
+                Using various machine learning clustering algorithms like Louvain and Markov, we tried to identify the most optimal clustering algorithm that assigned weights to the network graph (as described above).
+                Additionally, we built a pipeline using various APIs from open source projects like ProPublica to gather Congressional voting and sponsorship data and created visualizations using Python libraries. 
+                Our findings are on an open source package on Github. 
+            </p>
+        </div>
+
+        <div id="activism" class="project1">
+            <div class="content-title">
+                <h3>Engineering Activism</h3>
+                <p>Fall 2018 | Chicago, IL | Political Comuter Science @ Berkeley, consulting for Gather Activism</p>
+            </div>
+            <hr>
+            <p>
+                PCS consulted for Gather Activism, a Chicago-based startup that connects activists to political event organizers. 
+                We built a hybrid feature-based/collaborative recommender system in Python that used the mobile application users' past preferences on political issues to predict and recommend pieces of 
+                recent legislature they would likely take interest in. We trained the system we built using machine learning algorithms like random forest then hosted the system on an API for use in the Gather Activism app. 
+            </p>
+        </div>
+    </div>
+</body>
