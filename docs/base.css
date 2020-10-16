@@ -9,7 +9,7 @@
 
     div.main {
         margin-top: 60px;
-        
+        z-index:0;
     }
 
     div.padded {
@@ -32,7 +32,7 @@
     .navbar {
         overflow: hidden;
         background-color: #61d2ff;
-        position: fixed; /* Set the navbar to fixed position */
+        position: fixed; 
         /* top: 0; Position the navbar at the top of the page */
         width: 100%; /* Full width */
         
@@ -58,7 +58,7 @@
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
-        display: inline;
+        /* display: inline; */
         font-size:16px;
     }
 
@@ -67,7 +67,7 @@
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
-        display: inline;
+        /* display: inline; */
     }
 
     .navbar a:hover:not(.active) {
@@ -239,6 +239,12 @@
         background-color:#cccccc;
     }
 
+    .dropdown {
+        float: right;
+        overflow:hidden;
+
+    }
+
     .dropdown .dropbtn {
         margin-right:150px;
         cursor: pointer;
@@ -252,10 +258,15 @@
         
 
     }
+
+    .dropdown:hover .dropbtn, .dropbtn:focus {
+        background-color: #00a4e6;
+    }
     
-    .dropdown .dropdown-content {
+    .dropdown-content {
         display: none;
-        position:absolute;
+        position:fixed;
+        top:50px;
         min-width:200px;
         z-index: 1;
         float:right;
@@ -267,8 +278,4 @@
         display:block;
     }
 
-    .dropdown {
-        float: right;
-        overflow:hidden;
-
-    }
+    
