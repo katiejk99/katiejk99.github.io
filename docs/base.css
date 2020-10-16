@@ -29,14 +29,17 @@
     #proj {
         margin-left:150px;
     }
+
+
     .navbar {
         overflow: hidden;
         background-color: #61d2ff;
         position: fixed; 
         /* top: 0; Position the navbar at the top of the page */
         width: 100%; /* Full width */
+        float: left;
+        vertical-align:middle;
         
-
     }
 
     
@@ -45,9 +48,12 @@
         font-size: 2em;
         color: white;
         text-align: center;
-        padding:12px 45px 12px 45px ;
+        padding:5.5px 45px 14px 45px ;
+        /* top:0; */
         text-decoration: none;
         margin-left:150px;
+        /* display: inline-block; */
+        
     }
 
     .navbar .dropdown a {
@@ -58,7 +64,7 @@
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
-        /* display: inline; */
+        /* display: inline-block; */
         font-size:16px;
     }
 
@@ -67,7 +73,7 @@
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
-        /* display: inline; */
+        display: inline;
     }
 
     .navbar a:hover:not(.active) {
