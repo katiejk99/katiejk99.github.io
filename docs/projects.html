@@ -5,6 +5,8 @@
     <title>Katie Kim</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" type="text/css" href="base.css" media="screen" />
+    
+
 </head>
 
 <body>
@@ -14,13 +16,20 @@
                 <a href="index.html" title="Main page">K a t i e   K i m</a>
             </li>
             <li class="navitem" style="margin-left:150px;">
-                <a href="resume.html" title="Resume">Resume</a>
-            </li>
-            <li class="navitem">
                 <a class="active" href="projects.html" title="Projects">Projects</a>
             </li>
+            <li class="navitem" >
+                <a href="resume.html" title="Resume">Resume</a>
+            </li>
+            <li class="navitem" style="float:right;">
+                <button class="dropbtn">Spotify<i class="fa fa-caret-down"></i></button>
+            </li>
+            
 
         </ul>
+        <div class="dropdown-content">
+            <iframe src="https://open.spotify.com/embed/playlist/45qG4cdbD2Ln1HyXZR9B5f" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
     </div>
     <div id="sidenav" class="sidenav">
         <a href="#drone" id="dod">Drone on Demand</a>
@@ -30,6 +39,75 @@
         <a href="#call" id="roll">Roll Call</a>
         <a href="#activism" id="engineer">Engineering Activism</a>
     </div>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if ((document.body.scrollTop > document.querySelector("#drone").offsetTop - 30 && document.body.scrollTop < document.querySelector("#drone").offsetHeight + document.querySelector("#drone").offsetTop) || (document.documentElement.scrollTop > document.querySelector("#drone").offsetTop - 30 && document.documentElement.scrollTop < document.querySelector("#drone").offsetHeight + document.querySelector("#drone").offsetTop) ) {
+                document.getElementById("dod").style.right = "0";
+                document.getElementById("smoke").style.right = "-180px";
+                document.getElementById("lunch").style.right = "-180px";
+                document.getElementById("opioid").style.right = "-180px";
+                document.getElementById("roll").style.right = "-180px";
+                document.getElementById("engineer").style.right = "-180px";
+
+            }
+            else if ((document.body.scrollTop > document.querySelector("#sim").offsetTop - 30 && document.body.scrollTop < document.querySelector("#sim").offsetHeight + document.querySelector("#sim").offsetTop) || (document.documentElement.scrollTop > document.querySelector("#sim").offsetTop - 30 && document.documentElement.scrollTop < document.querySelector("#sim").offsetHeight + document.querySelector("#sim").offsetTop) ) {
+                document.getElementById("dod").style.right = "-180px";
+                document.getElementById("smoke").style.right = "0";
+                document.getElementById("lunch").style.right = "-180px";
+                document.getElementById("opioid").style.right = "-180px";
+                document.getElementById("roll").style.right = "-180px";
+                document.getElementById("engineer").style.right = "-180px";
+
+            }
+            else if ((document.body.scrollTop > document.querySelector("#lunchable").offsetTop - 30 && document.body.scrollTop < document.querySelector("#lunchable").offsetHeight + document.querySelector("#lunchable").offsetTop) || (document.documentElement.scrollTop > document.querySelector("#lunchable").offsetTop - 30 && document.documentElement.scrollTop < document.querySelector("#lunchable").offsetHeight + document.querySelector("#lunchable").offsetTop) ) {
+                document.getElementById("dod").style.right = "-180px";
+                document.getElementById("smoke").style.right = "-180px";
+                document.getElementById("lunch").style.right = "0";
+                document.getElementById("opioid").style.right = "-180px";
+                document.getElementById("roll").style.right = "-180px";
+                document.getElementById("engineer").style.right = "-180px";
+
+            }
+            else if ((document.body.scrollTop > document.querySelector("#crisis").offsetTop - 30 && document.body.scrollTop < document.querySelector("#crisis").offsetHeight + document.querySelector("#crisis").offsetTop) || (document.documentElement.scrollTop > document.querySelector("#crisis").offsetTop - 30 && document.documentElement.scrollTop < document.querySelector("#crisis").offsetHeight + document.querySelector("#crisis").offsetTop) ) {
+                document.getElementById("dod").style.right = "-180px";
+                document.getElementById("smoke").style.right = "-180px";
+                document.getElementById("lunch").style.right = "-180px";
+                document.getElementById("opioid").style.right = "0";
+                document.getElementById("roll").style.right = "-180px";
+                document.getElementById("engineer").style.right = "-180px";
+
+            }
+            else if ((document.body.scrollTop > document.querySelector("#call").offsetTop - 30 && document.body.scrollTop < document.querySelector("#call").offsetHeight + document.querySelector("#call").offsetTop) || (document.documentElement.scrollTop > document.querySelector("#call").offsetTop - 30 && document.documentElement.scrollTop < document.querySelector("#call").offsetHeight + document.querySelector("#call").offsetTop) ) {
+                document.getElementById("dod").style.right = "-180px";
+                document.getElementById("smoke").style.right = "-180px";
+                document.getElementById("lunch").style.right = "-180px";
+                document.getElementById("opioid").style.right = "-180px";
+                document.getElementById("roll").style.right = "0";
+                document.getElementById("engineer").style.right = "-180px";
+
+            }
+            else if ((document.body.scrollTop > document.querySelector("#activism").offsetTop - 30 && document.body.scrollTop < document.querySelector("#activism").offsetHeight + document.querySelector("#activism").offsetTop) || (document.documentElement.scrollTop > document.querySelector("#activism").offsetTop - 30 && document.documentElement.scrollTop < document.querySelector("#activism").offsetHeight + document.querySelector("#activism").offsetTop) ) {
+                document.getElementById("dod").style.right = "-180px";
+                document.getElementById("smoke").style.right = "-180px";
+                document.getElementById("lunch").style.right = "-180px";
+                document.getElementById("opioid").style.right = "-180px";
+                document.getElementById("roll").style.right = "-180px";
+                document.getElementById("engineer").style.right = "0";
+
+            }
+            else {
+                document.getElementById("dod").style.right = "-180px";
+                document.getElementById("smoke").style.right = "-180px";
+                document.getElementById("lunch").style.right = "-180px";
+                document.getElementById("opioid").style.right = "-180px";
+                document.getElementById("roll").style.right = "-180px";
+                document.getElementById("engineer").style.right = "-180px";
+            }
+        }
+    </script>
+    
     <div class="page-title" width="100%">
         <h1>Projects</h1>
         <div id="drone" class="project1">
@@ -40,7 +118,7 @@
             <hr />
             <p>
                 This semester, the <a href="https://www.pdatberkeley.com/">PDAB</a> consulting team is working with <a href="https://www.herotech8.com/">HeroTech8</a>, a UK-based startup that provides Drone in a Box services to their clients,
-                to build a demo app for the Drone on Demand service, an Uber-like service where users are able to call for a drone to take some footages in a given area. 
+                to build a demo web app for the Drone on Demand service, an Uber-like service where users are able to call for a drone to take some footages in a given area. 
 
             </p>
         </div>
@@ -146,7 +224,7 @@
             </div>
         </div>
 
-        <div id="activism" class="project1">
+        <div id="activism" class="project1" style="padding-bottom:250px;">
             <div class="content-title">
                 <h3>Engineering Activism</h3>
                 <p>Fall 2018 | Chicago, IL | Political Comuter Science @ Berkeley, consulting for Gather Activism</p>

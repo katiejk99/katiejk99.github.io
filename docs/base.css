@@ -173,8 +173,8 @@
         
         margin:auto;
         width:60%;
-        padding-top:30px;
-        padding-bottom:30px;
+        padding-top:60px;
+        padding-bottom:60px;
     }
 
     .project1 hr {
@@ -231,4 +231,5 @@
     .container {
         padding-top:75%;
         width:100%;
+        
     }
