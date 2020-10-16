@@ -193,9 +193,9 @@
     ul.linklist li{
         display:inline;
         text-decoration: none;
-        border-radius:5px;
+        /* border-radius:5px; */
         text-align:middle;
-        border:1px solid #555555;
+        /* border:1px solid #555555; */
         padding: 10px 14px 10px 14px;
         margin: 10px 12px 0 12px
     }
