@@ -27,7 +27,7 @@
         width: 400px;
     }
     #proj {
-        margin-left:150px;
+        margin-left:10%;
     }
 
 
@@ -51,14 +51,14 @@
         padding:5.5px 45px 14px 45px ;
         /* top:0; */
         text-decoration: none;
-        margin-left:150px;
+        margin-left:10%;
         /* display: inline-block; */
         /* vertical-align:middle; */
         
     }
 
     .navbar .dropdown a {
-        margin-right:150px;
+        margin-right:23%;
         float:right;
         font-family: 'Oswald', sans-serif;
         color: white;
@@ -164,10 +164,12 @@
         margin: auto;
         width:95%;
         padding-top:3em;
+        padding-bottom:3em;
         
     }
+    
     .page-title h1 {
-        margin-left:150px;
+        margin-left:10%;
     }
 
     .content-title {
@@ -254,7 +256,7 @@
     }
 
     .dropdown .dropbtn {
-        margin-right:350px;
+        margin-right:23%;
         cursor: pointer;
         font-size: 16px;  
         border: none;
