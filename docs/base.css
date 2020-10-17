@@ -277,6 +277,8 @@
     }
 
     
+    
+    
 
 
     ul.linklist1 {
@@ -359,4 +361,29 @@
         display:block;
     }
 
+    .collapsible {
+        width:90%;
+        background-color: #ffce99;
+        cursor:pointer;
+        padding:10px;
+        border:none;
+        text-align:middle;
+        outline:none;
+        font-size:16px;
+        margin-bottom:none;
+        padding-bottom:none;
+        font-family:inherit;
+    }
+
+    .collapsible:hover {
+        background-color:#ffc180;
+
+    }
+
+    .other {
+        margin-top:none;
+        padding-top:none;
+        overflow: hidden;
+        display:none;
+    }
     

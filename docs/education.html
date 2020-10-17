@@ -87,7 +87,7 @@
             <div class="content">
                 <h4>Computer Science</h4>
                 <div align="middle">
-                    <table class="courses">
+                    <table id="cs-class" class="courses">
                         <colgroup>
                             <col style="width:10%;">
                             <col style="width:65%;">
@@ -134,107 +134,340 @@
                                     Summer 2020
                                 </td>
                             </tr>
-                            <!-- <tr>
-                                <td></td>
-                                <td><button class="hide-table" onclick="toggleTable()">Show more</button></td>
-                                <td></td>
-                            </tr> -->
+                        </tbody>
+                    </table> 
+                    
+                        <button type="button" class="collapsible">Hide/show previous classes</button>
+
+                    
+                    <div class="other">
+                        <colgroup>
+                            <col style="width:10%;">
+                            <col style="width:65%;">
+                            <col style="width:15%">
+                        </colgroup>
+                        <table class="courses">
                             
-                            <tr id="hide-cs">
+                            <tbody>
+                                <tr >
+                                    <td>
+                                        CS61C
+                                    </td>
+                                    <td>
+                                        Machine Structures
+                                    </td>
+                                    <td>
+                                        Spring 2020
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td>
+                                        CS188
+                                    </td>
+                                    <td>
+                                        Introduction to Artificial Intelligence
+                                    </td>
+                                    <td>
+                                        Fall 2019
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td>
+                                        CS370
+                                    </td>
+                                    <td>
+                                        Introduction to Teaching Computer Science 
+                                    </td>
+                                    <td>
+                                        Fall 2019
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td>
+                                        CS70
+                                    </td>
+                                    <td>
+                                        Discrete Math and Probability Theory
+                                    </td>
+                                    <td>
+                                        Spring 2019
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td>
+                                        EE16A
+                                    </td>
+                                    <td>
+                                        Designing Information Devices and Systems I
+                                    </td>
+                                    <td>
+                                        Spring 2019
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td>
+                                        CS61B
+                                    </td>
+                                    <td>
+                                        Data Structures
+                                    </td>
+                                    <td>
+                                        Fall 2018
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td>
+                                        CS61A
+                                    </td>
+                                    <td>
+                                        Structure and Interpretation of Computer Systems
+                                    </td>
+                                    <td>
+                                        Summer 2018
+                                    </td>
+                                </tr>
+                            </tbody>
+                                
+                        </table>   
+                    </div>   
+                </div>
+                <script type="text/javascript"> 
+                    $(function(){
+                    $("#cs-class","body").on({'click':function(event){
+                        event.preventDefault();
+                        $(this).closest("tr.main").nextUntil("tr.main").toggle("fast");
+                    }},
+                    "a.main",null);
+                    });
+                </script>
+            </div>
+            <div class="content">
+                <h4>Molecular and Cell Biology</h4>
+                <div align="middle">
+                    <table class="courses">
+                        <colgroup>
+                            <col style="width:10%;">
+                            <col style="width:65%;">
+                            <col style="width:15%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Semester</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
                                 <td>
-                                    CS61C
+                                    MCB 110 
                                 </td>
                                 <td>
-                                    Machine Structures
+                                    Molecular Biology: Macromolecular Synthesis and Cellular Function
+                                </td>
+                                <td>
+                                    Fall 2020
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    MCB 132
+                                </td>
+                                <td>
+                                    Biology of Human Cancer
+                                </td>
+                                <td>
+                                    Fall 2020
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    MCB C100A
+                                </td>
+                                <td>
+                                    Biophysical Chemistry: Physical Principles and the Molecules of Life
                                 </td>
                                 <td>
                                     Spring 2020
                                 </td>
                             </tr>
-                            <tr id="hide-cs">
-                                <td>
-                                    CS188
-                                </td>
-                                <td>
-                                    Introduction to Artificial Intelligence
-                                </td>
-                                <td>
-                                    Fall 2019
-                                </td>
-                            </tr>
-                            <tr id="hide-cs">
-                                <td>
-                                    CS370
-                                </td>
-                                <td>
-                                    Introduction to Teaching Computer Science 
-                                </td>
-                                <td>
-                                    Fall 2019
-                                </td>
-                            </tr>
-                            <tr id="hide-cs">
-                                <td>
-                                    CS70
-                                </td>
-                                <td>
-                                    Discrete Math and Probability Theory
-                                </td>
-                                <td>
-                                    Spring 2019
-                                </td>
-                            </tr>
-                            <tr id="hide-cs">
-                                <td>
-                                    EE16A
-                                </td>
-                                <td>
-                                    Designing Information Devices and Systems I
-                                </td>
-                                <td>
-                                    Spring 2019
-                                </td>
-                            </tr>
-                            <tr id="hide-cs">
-                                <td>
-                                    CS61B
-                                </td>
-                                <td>
-                                    Data Structures
-                                </td>
-                                <td>
-                                    Fall 2018
-                                </td>
-                            </tr>
-                            <tr id="hide-cs">
-                                <td>
-                                    CS61A
-                                </td>
-                                <td>
-                                    Structure and Interpretation of Computer Systems
-                                </td>
-                                <td>
-                                    Summer 2018
-                                </td>
-                            </tr>
-                        
                         </tbody>
                     </table>
-                
+                    <button type="button" class="collapsible">Hide/show previous classes</button>
+                    <div class="other">
+                        <table class="courses">
+                            <colgroup>
+                                <col style="width:10%;">
+                                <col style="width:65%;">
+                                <col style="width:15%">
+                            </colgroup>
+                            <tbody>
+                                    <tr>
+                                        <td>
+                                            Chem 3BL
+                                        </td>
+                                        <td>
+                                            Organic Chemistry Laboratory                                
+                                        </td>
+                                        <td>
+                                            Spring 2020
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            MCB 140
+                                        </td>
+                                        <td>
+                                            General Genetics                                
+                                        </td>
+                                        <td>
+                                            Fall 2019
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Chem 3B
+                                        </td>
+                                        <td>
+                                            Chemical Structure and Reactivity
+                                        </td>
+                                        <td>
+                                            Summer 2019
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Bio 1A
+                                        </td>
+                                        <td>
+                                            General Biology Lecture
+                                        </td>
+                                        <td>
+                                            Spring 2019
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Bio 1AL
+                                        </td>
+                                        <td>
+                                            General Biology Laboratory 
+                                        </td>
+                                        <td>
+                                            Spring 2019
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Chem 3A
+                                        </td>
+                                        <td>
+                                            Chemical Structure and Reactivity
+                                        </td>
+                                        <td>
+                                            Fall 2018
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Chem 3AL
+                                        </td>
+                                        <td>
+                                            Organic Chemistry Laboratory
+                                        </td>
+                                        <td>
+                                            Fall 2018
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Physics 8B
+                                        </td>
+                                        <td>
+                                            Introductory Physics
+                                        </td>
+                                        <td>
+                                            Fall 2018
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Math 10B
+                                        </td>
+                                        <td>
+                                            Methods of Mathematics: Calculus, Statistics, and Combinatorics
+                                        </td>
+                                        <td>
+                                            Spring 2018
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Physics 8A
+                                        </td>
+                                        <td>
+                                            Introductory Physics
+                                        </td>
+                                        <td>
+                                            Spring 2018
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Chem 1A
+                                        </td>
+                                        <td>
+                                            General Chemistry
+                                        </td>
+                                        <td>
+                                            Fall 2017
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Chem 1AL
+                                        </td>
+                                        <td>
+                                            General Chemistry Laboratory
+                                        </td>
+                                        <td>
+                                            Fall 2017
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Math 10A
+                                        </td>
+                                        <td>
+                                            Methods of Mathematics: Calculus, Statistics, and Combinatorics
+                                        </td>
+                                        <td>
+                                            Fall 2017
+                                        </td>
+                                    </tr>
+                                </tbody>
+                        </table>
+                        </div>
+                    </div>
                     
-                </div>
-                <!-- <script>
-                    function toggleTable() {
-                        var x = document.getElementById("hide-cs");
-                        if (x.style.display === "none") {
-                            x.style.display = block;
-                        } else {
-                            x.style.display = none;
-                        }
-                    }
-                </script> -->
+                
             </div>
-            
+            <script>
+                var coll = document.getElementsByClassName("collapsible");
+                var i;
+
+                for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                    content.style.display = "none";
+                    } else {
+                    content.style.display = "block";
+                    }
+                });
+                }
+            </script>
         </div>
         
     </div>
