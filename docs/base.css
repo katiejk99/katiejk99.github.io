@@ -207,6 +207,77 @@
         margin-left:30px;
         margin-right:30px;
     }
+    
+    .content {
+        margin-bottom:60px;
+        
+
+    }
+    
+    .content ul {
+        display:inline;
+        text-decoration:none;
+        list-style-type:none;
+        overflow:hidden;
+
+    }
+
+    .content li {
+        text-decoration:none;
+        float:left;
+        text-align:justify;
+    }
+
+    .content p {
+        margin-left:50px;
+    }
+
+    .content h4 {
+        margin-left: 30px;
+
+    }
+
+    li.location {
+        display:inline;
+        color:#555555; 
+        float:right;
+        margin-right:30px;
+
+    }
+    .content ul li h4 {
+        margin-left: 30px;
+        display: inline;
+    }
+
+    ul.project1 li {
+        text-decoration:none;
+
+    }
+
+    table.courses {
+        table-layout:fixed;
+        width:90%;
+        border-collapse:collapse;
+    }
+
+    table.courses td {
+        text-align:left;
+        padding-top:10px;
+        padding-bottom:10px;
+    }
+
+    table.courses th {
+        text-align:left;
+        background-color: #ffce99;
+        padding-left:10px;
+    }
+
+    table.courses tr:nth-child(even) {
+        background-color:#ffe6cc;
+    }
+
+    
+
 
     ul.linklist1 {
         display:inline;
@@ -256,7 +327,7 @@
     }
 
     .dropdown .dropbtn {
-        margin-right: 150px;
+        margin-right: 350px;
         cursor: pointer;
         font-size: 16px;  
         border: none;

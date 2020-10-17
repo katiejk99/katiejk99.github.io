@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Oswald:wght@300&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="base.css" media="screen" />
+    <title>Katie Kim</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html" title="Main page">K a t i e   K i m</a>
+        <a class="active" href="education.html" title="Academics" id="proj">Academics</a>
+        <a href="projects.html" title="Projects" >Projects</a>
+        <a href="resume.html" title="Resume">Resume</a>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="showSpotify()">Spotify</button>
+            <div class="dropdown-content" id="spotify">
+                <iframe src="https://open.spotify.com/embed/playlist/45qG4cdbD2Ln1HyXZR9B5f" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+        </div>
+        
+
+
+
+       
+        <script>
+        
+
+            function showSpotify() {
+
+                document.getElementById("spotify").classList.toggle("show");
+            }
+
+            window.onclick = function(e) {
+                if (!e.target.matches(".dropbtn")) {
+                    var drop = document.getElementById("spot");
+                    if (drop.classList.contains("show")) {
+                        drop.classList.remove("show");
+                    }
+                }
+                
+            }
+        </script>
+    </div>
+    <div class="page-title">
+        <h1>Academics</h1>
+        <div class="project1">
+            <div class="content-title">
+                <h3>Education</h3>
+            </div>
+            <hr>
+            <div class="content">
+                <ul>
+                    <li><h4> University of California, Berkeley</h4></li>
+                    <li class="location">Berkeley, CA | 2017 - 2021</li>
+                </ul>
+                
+                <p>
+                    B.A. Computer Science 
+                    <br>B.A. Molecular and Cell Biology 
+                </p>
+                <p style="color:#555555">
+                    GPA: 3.385
+                
+                </p>
+            </div>
+            <div class="content">
+                <ul>
+                    <li><h4>Webber Academy</h4></li>
+                    <li class="location">Calgary, AB, Canada | 2011 - 2017</li>
+                </ul>
+                
+                
+                
+            </div>
+            
+        </div>
+        <div class="project1">
+            <div class="content-title">
+                <h3>
+                    Coursework
+                </h3>
+            </div>
+            <hr>
+            <div class="content">
+                <h4>Computer Science</h4>
+                <div align="middle">
+                    <table class="courses">
+                        <colgroup>
+                            <col style="width:10%;">
+                            <col style="width:65%;">
+                            <col style="width:15%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Semester</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    CS161
+                                </td>
+                                <td>
+                                    Computer Security
+                                </td>
+                                <td>
+                                    Fall 2020
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    CS184
+                                </td>
+                                <td>
+                                    Foundations in Computer Graphics
+                                </td>
+                                <td>
+                                    Summer 2020
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    DS100
+                                </td>
+                                <td>
+                                    Principles and Techniques of Data Science
+                                </td>
+                                <td>
+                                    Summer 2020
+                                </td>
+                            </tr>
+                            <!-- <tr>
+                                <td></td>
+                                <td><button class="hide-table" onclick="toggleTable()">Show more</button></td>
+                                <td></td>
+                            </tr> -->
+                            
+                            <tr id="hide-cs">
+                                <td>
+                                    CS61C
+                                </td>
+                                <td>
+                                    Machine Structures
+                                </td>
+                                <td>
+                                    Spring 2020
+                                </td>
+                            </tr>
+                            <tr id="hide-cs">
+                                <td>
+                                    CS188
+                                </td>
+                                <td>
+                                    Introduction to Artificial Intelligence
+                                </td>
+                                <td>
+                                    Fall 2019
+                                </td>
+                            </tr>
+                            <tr id="hide-cs">
+                                <td>
+                                    CS370
+                                </td>
+                                <td>
+                                    Introduction to Teaching Computer Science 
+                                </td>
+                                <td>
+                                    Fall 2019
+                                </td>
+                            </tr>
+                            <tr id="hide-cs">
+                                <td>
+                                    CS70
+                                </td>
+                                <td>
+                                    Discrete Math and Probability Theory
+                                </td>
+                                <td>
+                                    Spring 2019
+                                </td>
+                            </tr>
+                            <tr id="hide-cs">
+                                <td>
+                                    EE16A
+                                </td>
+                                <td>
+                                    Designing Information Devices and Systems I
+                                </td>
+                                <td>
+                                    Spring 2019
+                                </td>
+                            </tr>
+                            <tr id="hide-cs">
+                                <td>
+                                    CS61B
+                                </td>
+                                <td>
+                                    Data Structures
+                                </td>
+                                <td>
+                                    Fall 2018
+                                </td>
+                            </tr>
+                            <tr id="hide-cs">
+                                <td>
+                                    CS61A
+                                </td>
+                                <td>
+                                    Structure and Interpretation of Computer Systems
+                                </td>
+                                <td>
+                                    Summer 2018
+                                </td>
+                            </tr>
+                        
+                        </tbody>
+                    </table>
+                
+                    
+                </div>
+                <!-- <script>
+                    function toggleTable() {
+                        var x = document.getElementById("hide-cs");
+                        if (x.style.display === "none") {
+                            x.style.display = block;
+                        } else {
+                            x.style.display = none;
+                        }
+                    }
+                </script> -->
+            </div>
+            
+        </div>
+        
+    </div>
+    
+</body>
