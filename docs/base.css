@@ -108,6 +108,22 @@
         padding: 10px;
     }
 
+    a {
+        text-decoration: none; 
+        color:#888888;
+
+    }
+    
+    a:hover {
+        text-decoration:none;
+        background-color: #ffe6cc; 
+        
+    }
+
+    a:visited {
+        text-decoration: none;
+    }
+
     #sidenav a {
         position:fixed;
         right:-180px;
@@ -172,6 +188,7 @@
         margin-left:10%;
     }
 
+    
     .content-title {
         background-color: #ffc180;
     }
@@ -220,6 +237,7 @@
         text-decoration:none;
         list-style-type:none;
         overflow:hidden;
+        
 
     }
 
@@ -227,6 +245,7 @@
         text-decoration:none;
         float:left;
         text-align:justify;
+        
     }
 
     .content p {
@@ -234,9 +253,16 @@
         margin-right:50px;
     }
 
+   
     .content h4 {
         margin-left: 30px;
+        
 
+    }
+
+    .content ul li a {
+        text-decoration:inherit;
+        color:black;
     }
 
     li.location {
