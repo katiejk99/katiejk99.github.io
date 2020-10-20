@@ -50,8 +50,16 @@
                 <h3>About me</h3>
             </div>
             <hr>
-            <img src="IMG_0681.CR2" align="left" width="30%" style="padding:0 20px 10px 0px">
-
+            <img id="profile" src="IMG_0681.CR2" align="left" width="30%" style="padding:0 20px 10px 0px">
+            <script>
+                var img = document.getElementById("profile");
+                img.src="IMG_0681.CR2"
+                // img.parentNode.removeChild(img)
+                // img.src = "data:IMG_0681.CR2;base64," + 'R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';
+                // window.timeout(function() {
+                //     img = null;
+                // }, 60000)
+            </script>
             <p>
                 Hi! My name is Katie and I'm currently a senior at University of California, Berkeley. 
                 I'm pursuing a double major in Compuer Science, and Molecular and Cell Biology with emphasis on Biochemistry and Molecular Biology (Track 1).
