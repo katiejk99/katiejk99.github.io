@@ -45,9 +45,40 @@
         </script>
     </div>
     
-    <div class="page-title">
+    <div id="sidenav2" class="sidenav">
+        <a href="#education" id="edu">Education</a>
+        <a href="#coursework" id="cour">Coursework</a>
+        <a href="#extra" id="ec">Extracurriculars</a>
+    </div>
+    <script>
+        window.onscroll = function() {scrollFunction1()};
+
+        function scrollFunction1() {
+            if ((document.body.scrollTop > document.querySelector("#education").offsetTop - 30 && document.body.scrollTop < document.querySelector("#education").offsetHeight + document.querySelector("#education").offsetTop) || (document.documentElement.scrollTop > document.querySelector("#education").offsetTop - 30 && document.documentElement.scrollTop < document.querySelector("#education").offsetHeight + document.querySelector("#education").offsetTop) ) {
+                document.getElementById("edu").style.right = "0";
+                document.getElementById("cour").style.right = "-130px";
+                document.getElementById("ec").style.right = "-130px";
+                
+            }
+            else if ((document.body.scrollTop > document.querySelector("#coursework").offsetTop - 30 && document.body.scrollTop < document.querySelector("#coursework").offsetHeight + document.querySelector("#coursework").offsetTop) || (document.documentElement.scrollTop > document.querySelector("#coursework").offsetTop - 30 && document.documentElement.scrollTop < document.querySelector("#coursework").offsetHeight + document.querySelector("#coursework").offsetTop) ) {
+                document.getElementById("edu").style.right = "-130px";
+                document.getElementById("cour").style.right = "0";
+                document.getElementById("ec").style.right = "-130px";
+                
+            }
+            else if ((document.body.scrollTop > document.querySelector("#extra").offsetTop - 30 && document.body.scrollTop < document.querySelector("#extra").offsetHeight + document.querySelector("#extra").offsetTop) || (document.documentElement.scrollTop > document.querySelector("#extra").offsetTop - 30 && document.documentElement.scrollTop < document.querySelector("#extra").offsetHeight + document.querySelector("#extra").offsetTop) ) {
+                document.getElementById("edu").style.right = "-130px";
+                document.getElementById("cour").style.right = "-130px";
+                document.getElementById("ec").style.right = "0";
+                
+            }
+        }
+    </script>
+
+
+    <div  class="page-title">
         <h1>Academics</h1>
-        <div class="project1">
+        <div id="education" class="project1">
             <div class="content-title">
                 <h3>Education</h3>
             </div>
@@ -75,7 +106,7 @@
             </div>
             
         </div>
-        <div class="project1">
+        <div id="coursework" class="project1">
             <div class="content-title">
                 <h3>
                     Coursework
@@ -593,7 +624,7 @@
             </script>
         </div>
 
-        <div class="project1">
+        <div id="extra" class="project1">
             <div class="content-title">
                 <h3>Extracurriculars</h3>
             </div>

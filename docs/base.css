@@ -103,6 +103,10 @@
     h3 {
         font-size:2em;
     }
+    
+    h4 {
+        font-size:1.25em;
+    }
 
     td {
         padding: 10px;
@@ -174,6 +178,33 @@
         top:17.5em;
         background-color:#ffdab3;
 
+    }
+
+    #sidenav2 a {
+        position:fixed;
+        right:-130px;
+        transition:0.3s;
+        padding:15px;
+        width:150px;
+        text-decoration:none;
+        font-size:20px;
+        color:white;
+        border-radius:5px 0 0 5px;
+    }
+
+    #edu {
+        top:5em;
+        background-color: #ff9c33;
+    }
+
+    #cour {
+        top:7.5em;
+        background-color: #ffc180;
+    }
+
+    #ec { 
+        top:10em;
+        background-color: #ffdab3;
     }
 
     .page-title {
