@@ -358,6 +358,7 @@
         color: #555555;
         text-decoration: none;
     }
+    
     ul.linklist {
         display:inline;
         
@@ -379,6 +380,7 @@
 
     ul.linklist li:hover {
         background-color:#cccccc;
+        text-decoration:none;
     }
 
     .dropdown {
