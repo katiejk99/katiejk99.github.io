@@ -382,6 +382,10 @@
         text-decoration: none;
     }
 
+    ul.linklist a:hover {
+        background-color: none;
+    }
+
     ul.linklist li:hover {
         background-color:#cccccc;
         text-decoration:none;
