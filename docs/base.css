@@ -241,7 +241,7 @@
     .project1 {
         
         margin:auto;
-        width:60%;
+        width:800px;
         padding-top:60px;
         padding-bottom:60px;
     }
@@ -358,7 +358,7 @@
         color: #555555;
         text-decoration: none;
     }
-    
+
     ul.linklist {
         display:inline;
         
