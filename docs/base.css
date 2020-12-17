@@ -378,6 +378,7 @@
     ul.linklist a {
         color: #555555;
         text-decoration: none;
+        background-color:none;
     }
 
     ul.linklist a:hover {
