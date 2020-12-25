@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Oswald:wght@300&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="base.css" media="screen" />
+    <link rel="icon" type="images/jpg" href="icons/banany.jpg" sizes="16x16">
+    <title>Katie Kim</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html" title="Main page">K a t i e   K i m</a>
+        <a href="education.html" title="Education" id=proj>Education</a>
+        <a href="projects.html" title="Projects">Projects</a>
+        <a href="work.html" title="Work">Work</a>
+        <a class="active" href="resume.html" title="Resume">Resume</a>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="showSpotify()">Spotify</button>
+            <div class="dropdown-content" id="spotify">
+                <iframe src="https://open.spotify.com/embed/playlist/45qG4cdbD2Ln1HyXZR9B5f" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+        </div>
+        
+
+
+
+       
+        <script>
+
+            function showSpotify() {
+
+                document.getElementById("spotify").classList.toggle("show");
+            }
+
+            window.onclick = function(e) {
+                if (!e.target.matches(".dropbtn")) {
+                    var drop = document.getElementById("spot");
+                    if (drop.classList.contains("show")) {
+                        drop.classList.remove("show");
+                    }
+                }
+                
+            }
+        </script>
+    </div>
+    <div class="page-title">
+        <h1>Work</h1>
+        <div class="project1">
+            <div class="content-title">
+                <h3>
+                    Expedia Group
+                </h3>
+                <p>
+                    New Grad Software Development Engineer | Summer 2021 | Seattle, WA  
+                </p>
+                
+            </div>
+            <hr>
+            <p>
+                After my graduation in May 2021, I will be a full time SDE at Expedia (in Expedia Group) in Seattle. 
+            </p>
+        </div>
+        <div class="project1">
+            
+            <div class="content-title">
+                <h3>
+                    Fibulas, Inc. at Berkeley SkyDeck 
+                </h3>
+                <p>
+                    Product Manager | Fall 2020 | Berkeley, CA 
+                </p>
+            </div>
+            <hr>
+            <p>
+                Working closely with a client based at the University of Pittsburgh School of Medicine, I created a Django web application from scratch that was a database interface for Fibulas, Inc.'s BioUSB cryopreservation technology. 
+                Users were able to organize, and keep track of check in/out data of samples that were in BioUSBs.
+            </p>
+        </div>
+        <div class="project1">
+            <div class="content-title">
+                <h3>
+                    Lunchable, Inc. at Berkeley SkyDeck
+                </h3>
+                <p>
+                    Lead Full Stack Engineer | Summer 2020 | Berkeley, CA 
+                </p>
+            </div>
+            <hr>
+            <p>
+                I worked with 5 other software engineering interns to create a Django web application from scratch to help college students match with peers of similar interests using a hierarchical clustering machine learning algorithm. 
+                Users were sent weekly notifications of their time for meeting, creating a group chat with Agora video conferencing API integrated so that they can meet virtually during the COVID19 pandemic. 
+            </p>
+        </div>
+    </div>
+</body>
