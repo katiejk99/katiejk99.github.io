@@ -60,7 +60,7 @@
     }
 
     .navbar .dropdown a {
-        margin-right:23%;
+        /* margin-right:23%; */
         float:right;
         font-family: 'Oswald', sans-serif;
         color: white;
