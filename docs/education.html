@@ -1,768 +1,592 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Oswald:wght@300&display=swap" rel="stylesheet" />
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Oswald:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" type="text/css" href="base.css" media="screen" />
-    <link rel="icon" type="images/jpg" href="icons/banany.jpg" sizes="16x16">
+    <link rel="icon" type="images/jpg" href="icons/banany.jpg" sizes="16x16" />
 
     <title>Katie Kim</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <div class="navbar">
-        <a href="index.html" title="Main page">K a t i e   K i m</a>
-        <a class="active" href="education.html" title="Education" id=proj>Education</a>
-        <a href="projects.html" title="Projects" >Projects</a>
-        <a href="work.html" title="Work">Work</a>
-        <a  href="resume.html" title="Resume">Resume</a>
-        <div class="dropdown">
-            <button class="dropbtn" onclick="showSpotify()">Spotify</button>
-            <div class="dropdown-content" id="spotify">
-                <iframe src="https://open.spotify.com/embed/playlist/45qG4cdbD2Ln1HyXZR9B5f" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-            </div>
+      <a href="index.html" title="Main page">K a t i e K i m</a>
+      <a class="active" href="education.html" title="Education" id="proj"
+        >Education</a
+      >
+      <a href="projects.html" title="Projects">Projects</a>
+      <a href="work.html" title="Work">Work</a>
+      <a href="resume.html" title="Resume">Resume</a>
+      <div class="dropdown">
+        <button class="dropbtn" onclick="showSpotify()">Spotify</button>
+        <div class="dropdown-content" id="spotify">
+          <iframe
+            src="https://open.spotify.com/embed/playlist/45qG4cdbD2Ln1HyXZR9B5f"
+            width="300"
+            height="380"
+            frameborder="0"
+            allowtransparency="true"
+            allow="encrypted-media"
+          ></iframe>
         </div>
-        
+      </div>
 
+      <script>
+        function showSpotify() {
+          document.getElementById("spotify").classList.toggle("show");
+        }
 
-
-       
-        <script>
-        
-
-            function showSpotify() {
-
-                document.getElementById("spotify").classList.toggle("show");
+        window.onclick = function (e) {
+          if (!e.target.matches(".dropbtn")) {
+            var drop = document.getElementById("spot");
+            if (drop.classList.contains("show")) {
+              drop.classList.remove("show");
             }
-
-            window.onclick = function(e) {
-                if (!e.target.matches(".dropbtn")) {
-                    var drop = document.getElementById("spot");
-                    if (drop.classList.contains("show")) {
-                        drop.classList.remove("show");
-                    }
-                }
-                
-            }
-        </script>
+          }
+        };
+      </script>
     </div>
-   
+
     <div id="sidenav2" class="sidenav">
-        <a href="#education" id="edu">Education</a>
-        <a href="#coursework" id="cour">Coursework</a>
-        <a href="#extra" id="ec">Extracurriculars</a>
+      <a href="#education" id="edu">Education</a>
+      <a href="#coursework" id="cour">Coursework</a>
+      <a href="#extra" id="ec">Extracurriculars</a>
     </div>
     <script>
-        window.onscroll = function() {scrollFunction1()};
+      window.onscroll = function () {
+        scrollFunction1();
+      };
 
-        function scrollFunction1() {
-            if ((document.body.scrollTop > document.querySelector("#education").offsetTop - 30 && document.body.scrollTop < document.querySelector("#education").offsetHeight + document.querySelector("#education").offsetTop) || (document.documentElement.scrollTop > document.querySelector("#education").offsetTop - 30 && document.documentElement.scrollTop < document.querySelector("#education").offsetHeight + document.querySelector("#education").offsetTop) ) {
-                document.getElementById("edu").style.right = "0";
-                document.getElementById("cour").style.right = "-130px";
-                document.getElementById("ec").style.right = "-130px";
-                
-            }
-            else if ((document.body.scrollTop > document.querySelector("#coursework").offsetTop - 30 && document.body.scrollTop < document.querySelector("#coursework").offsetHeight + document.querySelector("#coursework").offsetTop) || (document.documentElement.scrollTop > document.querySelector("#coursework").offsetTop - 30 && document.documentElement.scrollTop < document.querySelector("#coursework").offsetHeight + document.querySelector("#coursework").offsetTop) ) {
-                document.getElementById("edu").style.right = "-130px";
-                document.getElementById("cour").style.right = "0";
-                document.getElementById("ec").style.right = "-130px";
-                
-            }
-            else if ((document.body.scrollTop > document.querySelector("#extra").offsetTop - 30 && document.body.scrollTop < document.querySelector("#extra").offsetHeight + document.querySelector("#extra").offsetTop) || (document.documentElement.scrollTop > document.querySelector("#extra").offsetTop - 30 && document.documentElement.scrollTop < document.querySelector("#extra").offsetHeight + document.querySelector("#extra").offsetTop) ) {
-                document.getElementById("edu").style.right = "-130px";
-                document.getElementById("cour").style.right = "-130px";
-                document.getElementById("ec").style.right = "0";
-                
-            }
+      function scrollFunction1() {
+        if (
+          (document.body.scrollTop >
+            document.querySelector("#education").offsetTop - 30 &&
+            document.body.scrollTop <
+              document.querySelector("#education").offsetHeight +
+                document.querySelector("#education").offsetTop) ||
+          (document.documentElement.scrollTop >
+            document.querySelector("#education").offsetTop - 30 &&
+            document.documentElement.scrollTop <
+              document.querySelector("#education").offsetHeight +
+                document.querySelector("#education").offsetTop)
+        ) {
+          document.getElementById("edu").style.right = "0";
+          document.getElementById("cour").style.right = "-130px";
+          document.getElementById("ec").style.right = "-130px";
+        } else if (
+          (document.body.scrollTop >
+            document.querySelector("#coursework").offsetTop - 30 &&
+            document.body.scrollTop <
+              document.querySelector("#coursework").offsetHeight +
+                document.querySelector("#coursework").offsetTop) ||
+          (document.documentElement.scrollTop >
+            document.querySelector("#coursework").offsetTop - 30 &&
+            document.documentElement.scrollTop <
+              document.querySelector("#coursework").offsetHeight +
+                document.querySelector("#coursework").offsetTop)
+        ) {
+          document.getElementById("edu").style.right = "-130px";
+          document.getElementById("cour").style.right = "0";
+          document.getElementById("ec").style.right = "-130px";
+        } else if (
+          (document.body.scrollTop >
+            document.querySelector("#extra").offsetTop - 30 &&
+            document.body.scrollTop <
+              document.querySelector("#extra").offsetHeight +
+                document.querySelector("#extra").offsetTop) ||
+          (document.documentElement.scrollTop >
+            document.querySelector("#extra").offsetTop - 30 &&
+            document.documentElement.scrollTop <
+              document.querySelector("#extra").offsetHeight +
+                document.querySelector("#extra").offsetTop)
+        ) {
+          document.getElementById("edu").style.right = "-130px";
+          document.getElementById("cour").style.right = "-130px";
+          document.getElementById("ec").style.right = "0";
         }
+      }
     </script>
 
-
-    <div  class="page-title">
-        <h1>Academics</h1>
-        <div id="education" class="project1">
-            <div class="content-title">
-                <h3>Education</h3>
-            </div>
-            <hr>
-            <div class="content">
-                <ul>
-                    <li><h4> University of California, Berkeley</h4></li>
-                    <li class="location">Berkeley, CA | 2017 - 2021</li>
-                </ul>
-                
-                <p>
-                    B.A. Computer Science 
-                    <br>B.A. Molecular and Cell Biology 
-                </p>
-                <p style="color:#555555">
-                    GPA: 3.385
-                
-                </p>
-            </div>
-            <div class="content">
-                <ul>
-                    <li><h4>Webber Academy</h4></li>
-                    <li class="location">Calgary, AB, Canada | 2011 - 2017</li>
-                </ul>
-            </div>
-            
+    <div class="page-title">
+      <h1>Academics</h1>
+      <div id="education" class="project1">
+        <div class="content-title">
+          <h3>Education</h3>
         </div>
-        <div id="coursework" class="project1">
-            <div class="content-title">
-                <h3>
-                    Coursework
-                </h3>
-            </div>
-            <hr>
-            <div class="content" >
-                <ul>
-                    <li><h4>Computer Science</h4></li>
-                </ul>
-                
-                <div align="middle" style="padding-top:10px;">
-                    <table id="cs-class" class="courses">
-                        <colgroup>
-                            <col style="width:12%;">
-                            <col style="width:63%;">
-                            <col style="width:15%">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Name</th>
-                                <th>Semester</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    CS186
-                                </td>
-                                <td>
-                                    Introduction to Database Systems
-                                </td>
-                                <td>
-                                    Spring 2021
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    CS161
-                                </td>
-                                <td>
-                                    Computer Security
-                                </td>
-                                <td>
-                                    Fall 2020
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    CS184
-                                </td>
-                                <td>
-                                    Foundations in Computer Graphics
-                                </td>
-                                <td>
-                                    Summer 2020
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    DS100
-                                </td>
-                                <td>
-                                    Principles and Techniques of Data Science
-                                </td>
-                                <td>
-                                    Summer 2020
-                                </td>
-                            </tr>
-                            <tr >
-                                <td>
-                                    CS188
-                                </td>
-                                <td>
-                                    Introduction to Artificial Intelligence
-                                </td>
-                                <td>
-                                    Fall 2019
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table> 
-                    
-                        <button type="button" class="collapsible">Hide/show previous classes</button>
+        <hr />
+        <div class="content">
+          <ul>
+            <li><h4>University of California, Berkeley</h4></li>
+            <li class="location">Berkeley, CA | 2017 - 2021</li>
+          </ul>
 
-                    
-                    <div class="other">
-                        
-                        <table class="courses">
-                            <colgroup>
-                                <col style="width:12%;">
-                                <col style="width:63%;">
-                                <col style="width:15%">
-                            </colgroup>
-                            <tbody>
-                                <tr >
-                                    <td>
-                                        EE16B
-                                    </td>
-                                    <td>
-                                        Designing Information Devices and Systems II
-                                    </td>
-                                    <td>
-                                        Spring 2021
-                                    </td>
-                                </tr>
-                                
-                                <tr >
-                                    <td>
-                                        CS61C
-                                    </td>
-                                    <td>
-                                        Machine Structures
-                                    </td>
-                                    <td>
-                                        Spring 2020
-                                    </td>
-                                </tr>
-                                
-                                <tr >
-                                    <td>
-                                        CS370
-                                    </td>
-                                    <td>
-                                        Introduction to Teaching Computer Science 
-                                    </td>
-                                    <td>
-                                        Fall 2019
-                                    </td>
-                                </tr>
-                                <tr >
-                                    <td>
-                                        CS70
-                                    </td>
-                                    <td>
-                                        Discrete Math and Probability Theory
-                                    </td>
-                                    <td>
-                                        Spring 2019
-                                    </td>
-                                </tr>
-                                <tr >
-                                    <td>
-                                        EE16A
-                                    </td>
-                                    <td>
-                                        Designing Information Devices and Systems I
-                                    </td>
-                                    <td>
-                                        Spring 2019
-                                    </td>
-                                </tr>
-                                <tr >
-                                    <td>
-                                        CS61B
-                                    </td>
-                                    <td>
-                                        Data Structures
-                                    </td>
-                                    <td>
-                                        Fall 2018
-                                    </td>
-                                </tr>
-                                <tr >
-                                    <td>
-                                        CS61A
-                                    </td>
-                                    <td>
-                                        Structure and Interpretation of Computer Programs
-                                    </td>
-                                    <td>
-                                        Summer 2018
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        CS10
-                                    </td>
-                                    <td>
-                                        Beauty and Joy in Computing 
-                                    </td>
-                                    <td>
-                                        Spring 2018
-                                    </td>
-                                </tr>
-                            </tbody>
-                                
-                        </table>   
-                    </div>   
-                </div>
-            </div>
-            <div class="content">
-                <ul>
-                    <li><h4>Molecular and Cell Biology</h4></li>
-                </ul>
-                <div align="middle"style="padding-top:10px;">
-                    <table class="courses">
-                        <colgroup>
-                            <col style="width:12%;">
-                            <col style="width:63%;">
-                            <col style="width:15%">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Name</th>
-                                <th>Semester</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    MCB 170L  
-                                </td>
-                                <td>
-                                    Molecular and Cell Biology Laboratory
-                                </td>
-                                <td>
-                                    Summer 2021
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    MCB 100B
-                                </td>
-                                <td>
-                                    Biochemistry: Pathways, Mechanisms, and Regulation
-                                </td>
-                                <td>
-                                    Spring 2021
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    MCB 110 
-                                </td>
-                                <td>
-                                    Molecular Biology: Macromolecular Synthesis and Cellular Function
-                                </td>
-                                <td>
-                                    Fall 2020
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    MCB 132
-                                </td>
-                                <td>
-                                    Biology of Human Cancer
-                                </td>
-                                <td>
-                                    Fall 2020
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    MCB C100A
-                                </td>
-                                <td>
-                                    Biophysical Chemistry: Physical Principles and the Molecules of Life
-                                </td>
-                                <td>
-                                    Spring 2020
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    MCB 140
-                                </td>
-                                <td>
-                                    General Genetics                                
-                                </td>
-                                <td>
-                                    Fall 2019
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <button type="button" class="collapsible">Hide/show previous classes</button>
-                    <div class="other">
-                        <table class="courses">
-                            <colgroup>
-                                <col style="width:12%;">
-                                <col style="width:63%;">
-                                <col style="width:15%">
-                            </colgroup>
-                            <tbody>
-                                    <tr>
-                                        <td>
-                                            Chem 3BL
-                                        </td>
-                                        <td>
-                                            Organic Chemistry Laboratory                                
-                                        </td>
-                                        <td>
-                                            Spring 2020
-                                        </td>
-                                    </tr>
-                                    
-                                    <tr>
-                                        <td>
-                                            Chem 3B
-                                        </td>
-                                        <td>
-                                            Chemical Structure and Reactivity
-                                        </td>
-                                        <td>
-                                            Summer 2019
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Bio 1A
-                                        </td>
-                                        <td>
-                                            General Biology Lecture
-                                        </td>
-                                        <td>
-                                            Spring 2019
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Bio 1AL
-                                        </td>
-                                        <td>
-                                            General Biology Laboratory 
-                                        </td>
-                                        <td>
-                                            Spring 2019
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Chem 3A
-                                        </td>
-                                        <td>
-                                            Chemical Structure and Reactivity
-                                        </td>
-                                        <td>
-                                            Fall 2018
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Chem 3AL
-                                        </td>
-                                        <td>
-                                            Organic Chemistry Laboratory
-                                        </td>
-                                        <td>
-                                            Fall 2018
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Physics 8B
-                                        </td>
-                                        <td>
-                                            Introductory Physics
-                                        </td>
-                                        <td>
-                                            Fall 2018
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Math 10B
-                                        </td>
-                                        <td>
-                                            Methods of Mathematics: Calculus, Statistics, and Combinatorics
-                                        </td>
-                                        <td>
-                                            Spring 2018
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Physics 8A
-                                        </td>
-                                        <td>
-                                            Introductory Physics
-                                        </td>
-                                        <td>
-                                            Spring 2018
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Chem 1A
-                                        </td>
-                                        <td>
-                                            General Chemistry
-                                        </td>
-                                        <td>
-                                            Fall 2017
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Chem 1AL
-                                        </td>
-                                        <td>
-                                            General Chemistry Laboratory
-                                        </td>
-                                        <td>
-                                            Fall 2017
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Math 10A
-                                        </td>
-                                        <td>
-                                            Methods of Mathematics: Calculus, Statistics, and Combinatorics
-                                        </td>
-                                        <td>
-                                            Fall 2017
-                                        </td>
-                                    </tr>
-                                </tbody>
-                        </table>
-                        </div>
-                </div>
-            </div>
-            <div class="content">
-                <ul>
-                    <li><h4>Other</h4></li>
-                </ul>
-                
-                <div align="middle" style="padding-top:10px;">
-                    <button type="button" class="collapsible">Hide/show previous classes</button>
-                    <div class="other">
-                        <table class="courses">
-                            <colgroup>
-                                <col style="width:12%;">
-                                <col style="width:63%;">
-                                <col style="width:15%">
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Name</th>
-                                    <th>Semester</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        History 131B
-                                    </td>
-                                    <td>
-                                        Social History of the United States: Creating Modern American Society: From the End of the Civil War                      
-                                    </td>
-                                    <td>
-                                        Summer 2021
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Korean 109
-                                    </td>
-                                    <td>
-                                        Korean Language in Popular Media                      
-                                    </td>
-                                    <td>
-                                        Spring 2021
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        ESPM 162A 
-                                    </td>
-                                    <td>
-                                        Health, Medicine, Society, and Environment                         
-                                    </td>
-                                    <td>
-                                        Fall 2020
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Music 27 
-                                    </td>
-                                    <td>
-                                        Introduction to Western Music                               
-                                    </td>
-                                    <td>
-                                        Spring 2020
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        BioE C131 
-                                    </td>
-                                    <td>
-                                        Introduction to Computational Molecular and Cell Biology
-                                    </td>
-                                    <td>
-                                        Fall 2019
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Math W53 
-                                    </td>
-                                    <td>
-                                        Multivariable Calculus
-                                    </td>
-                                    <td>
-                                        Summer 2019
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Colwrit R4B 
-                                    </td>
-                                    <td>
-                                        Reading, Composition, and Research: Modern Love
-                                    </td>
-                                    <td>
-                                        Spring 2019
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Korean 187
-                                    </td>
-                                    <td>
-                                        History and Memory in Korean Cinema
-                                    </td>
-                                    <td>
-                                        Fall 2018
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Psych 1
-                                    </td>
-                                    <td>
-                                        General Psychology
-                                    </td>
-                                    <td>
-                                        Spring 2018
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Complit R1A
-                                    </td>
-                                    <td>
-                                        English Composition in Connection with the Reading of World Literature:<br>What Is and What Could Be
-                                    </td>
-                                    <td>
-                                        Fall 2018
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Sociol 1
-                                    </td>
-                                    <td>
-                                        Introduction to Sociology
-                                    </td>
-                                    <td>
-                                        Fall 2017
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <script>
-                var coll = document.getElementsByClassName("collapsible");
-                var i;
-
-                for (i = 0; i < coll.length; i++) {
-                coll[i].addEventListener("click", function() {
-                    this.classList.toggle("active");
-                    var content = this.nextElementSibling;
-                    if (content.style.display === "block") {
-                    content.style.display = "none";
-                    } else {
-                    content.style.display = "block";
-                    }
-                });
-                }
-            </script>
+          <p>
+            B.A. Computer Science
+            <br />B.A. Molecular and Cell Biology
+          </p>
+          <p style="color: #555555">GPA: 3.385</p>
         </div>
-
-        <div id="extra" class="project1">
-            <div class="content-title">
-                <h3>Extracurriculars</h3>
-            </div>
-            <hr>
-            <div class="content">
-                <ul>
-                    <li><h4><a href="pdatberkeley.com">Product Development at Berkeley</a></h4></li>
-                    <li class="location">Spring 2020 - Fall 2020</li>
-                </ul>
-                <p>
-                   During the Fall 2020 semester, I served as the Internal Vice President of PDAB. 
-                    I was in charge of internal affairs of the club such as membership recruitment at the beginning of the semester, 
-                    and organizing (virtual) social events for PDAB members. 
-                    I also simultaneously worked as a consultant on the <a href="#drone">Drones on Demand</a> (find more about it under my <a href="projects.html">Projects</a> page) project this semester. 
-                </p>
-                <p>
-                    I also worked as the consulting tech team lead in Spring 2020, where I led the tech team of 4 to consult for 
-                    <a href="http://trylunchable.com">Lunchable, Inc.</a> to work on the <a href="#lunchable">Lunchable App</a> project also on my <a href="projects.html">Projects</a> page.
-
-                </p>
-                
-            </div>
-            <div class="content">
-                <ul>
-                    <li><h4><a href="https://pcs.berkeley.edu/">Political Computer Science @ Berkeley</a></h4></li>
-                    <li class="location">Fall 2018 - Fall 2019</li>
-                </ul>
-                <p>
-                    I joined this club in Fall 2018 as a project analyst and worked on projects like <a href="#activism">Engineering Activism</a>, 
-                    <a href="#call">Roll Call</a>, and <a href="#crisis">Opioid Crisis</a> on my <a href="projects.html">Projects</a> page. 
-                </p>
-                <p>
-                    From Spring 2019 to Fall 2019, I was also acting as the Internal Vice President. 
-                    I was in charge of running weekly meetings, 
-                    managing finances and budget, and organizing social events that were open to all members. 
-                    During the Fall 2019 semester, I was able to organize and host the first ever PCS retreat at Monterey, CA. 
-                    
-                </p>
-            </div>
-            <div class="content">
-                <ul>
-                    <li><h4>UC Berkeley EECS Department</h4></li>
-                    <li class="location">Summer 2018 - Fall 2019</li> 
-                </ul>
-                <p>
-                    During the semesters Fall 2018, <a href="https://inst.eecs.berkeley.edu/~cs61a/sp19/academic-interns.html">Spring 2019</a>, Summer 2019, and <a href="https://inst.eecs.berkeley.edu/~cs61a/fa19/academic-interns.html">Fall 2019</a>, I worked as an Academic Intern for CS61A: The Structure and Interpretation of Computer Programs. 
-                    I assisted students in the labs and office hours with coursework in Python, SQL, and Scheme (a dialect of Lisp). 
-
-                    In Fall 2019, through CS370: Introduction to Teaching Computer Science, I additionally provided 3 hours of tutoring every week to students who signed up and received a review of average 4.54 out of 5 for the whole semester. 
-                </p>
-                <p>
-                    In Summer 2018, I worked as a Lab Assistant for CS10: The Beauty and Joy of Computing. 
-                    I assisted students in the labs and office hours with coursework in Snap! and Python. 
-                    I also volunteered to tutor individual students outside of the classroom for 2 hours a week. 
-                </p>
-                
-            </div>
+        <div class="content">
+          <ul>
+            <li><h4>Webber Academy</h4></li>
+            <li class="location">Calgary, AB, Canada | 2011 - 2017</li>
+          </ul>
         </div>
-        
+      </div>
+      <div id="coursework" class="project1">
+        <div class="content-title">
+          <h3>Coursework</h3>
+        </div>
+        <hr />
+        <div class="content">
+          <ul>
+            <li><h4>Computer Science</h4></li>
+          </ul>
+
+          <div align="middle" style="padding-top: 10px">
+            <table id="cs-class" class="courses">
+              <colgroup>
+                <col style="width: 12%" />
+                <col style="width: 63%" />
+                <col style="width: 15%" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Semester</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CS186</td>
+                  <td>Introduction to Database Systems</td>
+                  <td>Spring 2021</td>
+                </tr>
+                <tr>
+                  <td>CS161</td>
+                  <td>Computer Security</td>
+                  <td>Fall 2020</td>
+                </tr>
+                <tr>
+                  <td>CS184</td>
+                  <td>Foundations in Computer Graphics</td>
+                  <td>Summer 2020</td>
+                </tr>
+                <tr>
+                  <td>DS100</td>
+                  <td>Principles and Techniques of Data Science</td>
+                  <td>Summer 2020</td>
+                </tr>
+                <tr>
+                  <td>CS188</td>
+                  <td>Introduction to Artificial Intelligence</td>
+                  <td>Fall 2019</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <button type="button" class="collapsible">
+              Hide/show previous classes
+            </button>
+
+            <div class="other">
+              <table class="courses">
+                <colgroup>
+                  <col style="width: 12%" />
+                  <col style="width: 63%" />
+                  <col style="width: 15%" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td>EE16B</td>
+                    <td>Designing Information Devices and Systems II</td>
+                    <td>Spring 2021</td>
+                  </tr>
+
+                  <tr>
+                    <td>CS61C</td>
+                    <td>Machine Structures</td>
+                    <td>Spring 2020</td>
+                  </tr>
+
+                  <tr>
+                    <td>CS370</td>
+                    <td>Introduction to Teaching Computer Science</td>
+                    <td>Fall 2019</td>
+                  </tr>
+                  <tr>
+                    <td>CS70</td>
+                    <td>Discrete Math and Probability Theory</td>
+                    <td>Spring 2019</td>
+                  </tr>
+                  <tr>
+                    <td>EE16A</td>
+                    <td>Designing Information Devices and Systems I</td>
+                    <td>Spring 2019</td>
+                  </tr>
+                  <tr>
+                    <td>CS61B</td>
+                    <td>Data Structures</td>
+                    <td>Fall 2018</td>
+                  </tr>
+                  <tr>
+                    <td>CS61A</td>
+                    <td>Structure and Interpretation of Computer Programs</td>
+                    <td>Summer 2018</td>
+                  </tr>
+                  <tr>
+                    <td>CS10</td>
+                    <td>Beauty and Joy in Computing</td>
+                    <td>Spring 2018</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <ul>
+            <li><h4>Molecular and Cell Biology</h4></li>
+          </ul>
+          <div align="middle" style="padding-top: 10px">
+            <table class="courses">
+              <colgroup>
+                <col style="width: 12%" />
+                <col style="width: 63%" />
+                <col style="width: 15%" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Semester</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>MCB 170L</td>
+                  <td>Molecular and Cell Biology Laboratory</td>
+                  <td>Summer 2021</td>
+                </tr>
+                <tr>
+                  <td>MCB 100B</td>
+                  <td>Biochemistry: Pathways, Mechanisms, and Regulation</td>
+                  <td>Spring 2021</td>
+                </tr>
+                <tr>
+                  <td>MCB 110</td>
+                  <td>
+                    Molecular Biology: Macromolecular Synthesis and Cellular
+                    Function
+                  </td>
+                  <td>Fall 2020</td>
+                </tr>
+                <tr>
+                  <td>MCB 132</td>
+                  <td>Biology of Human Cancer</td>
+                  <td>Fall 2020</td>
+                </tr>
+                <tr>
+                  <td>MCB C100A</td>
+                  <td>
+                    Biophysical Chemistry: Physical Principles and the Molecules
+                    of Life
+                  </td>
+                  <td>Spring 2020</td>
+                </tr>
+                <tr>
+                  <td>MCB 140</td>
+                  <td>General Genetics</td>
+                  <td>Fall 2019</td>
+                </tr>
+              </tbody>
+            </table>
+            <button type="button" class="collapsible">
+              Hide/show previous classes
+            </button>
+            <div class="other">
+              <table class="courses">
+                <colgroup>
+                  <col style="width: 12%" />
+                  <col style="width: 63%" />
+                  <col style="width: 15%" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td>Chem 3BL</td>
+                    <td>Organic Chemistry Laboratory</td>
+                    <td>Spring 2020</td>
+                  </tr>
+
+                  <tr>
+                    <td>Chem 3B</td>
+                    <td>Chemical Structure and Reactivity</td>
+                    <td>Summer 2019</td>
+                  </tr>
+                  <tr>
+                    <td>Bio 1A</td>
+                    <td>General Biology Lecture</td>
+                    <td>Spring 2019</td>
+                  </tr>
+                  <tr>
+                    <td>Bio 1AL</td>
+                    <td>General Biology Laboratory</td>
+                    <td>Spring 2019</td>
+                  </tr>
+                  <tr>
+                    <td>Chem 3A</td>
+                    <td>Chemical Structure and Reactivity</td>
+                    <td>Fall 2018</td>
+                  </tr>
+                  <tr>
+                    <td>Chem 3AL</td>
+                    <td>Organic Chemistry Laboratory</td>
+                    <td>Fall 2018</td>
+                  </tr>
+                  <tr>
+                    <td>Physics 8B</td>
+                    <td>Introductory Physics</td>
+                    <td>Fall 2018</td>
+                  </tr>
+                  <tr>
+                    <td>Math 10B</td>
+                    <td>
+                      Methods of Mathematics: Calculus, Statistics, and
+                      Combinatorics
+                    </td>
+                    <td>Spring 2018</td>
+                  </tr>
+                  <tr>
+                    <td>Physics 8A</td>
+                    <td>Introductory Physics</td>
+                    <td>Spring 2018</td>
+                  </tr>
+                  <tr>
+                    <td>Chem 1A</td>
+                    <td>General Chemistry</td>
+                    <td>Fall 2017</td>
+                  </tr>
+                  <tr>
+                    <td>Chem 1AL</td>
+                    <td>General Chemistry Laboratory</td>
+                    <td>Fall 2017</td>
+                  </tr>
+                  <tr>
+                    <td>Math 10A</td>
+                    <td>
+                      Methods of Mathematics: Calculus, Statistics, and
+                      Combinatorics
+                    </td>
+                    <td>Fall 2017</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <ul>
+            <li><h4>Other</h4></li>
+          </ul>
+
+          <div align="middle" style="padding-top: 10px">
+            <button type="button" class="collapsible">
+              Hide/show previous classes
+            </button>
+            <div class="other">
+              <table class="courses">
+                <colgroup>
+                  <col style="width: 12%" />
+                  <col style="width: 63%" />
+                  <col style="width: 15%" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Semester</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>History 131B</td>
+                    <td>
+                      Social History of the United States: Creating Modern
+                      American Society: From the End of the Civil War
+                    </td>
+                    <td>Summer 2021</td>
+                  </tr>
+                  <tr>
+                    <td>Korean 109</td>
+                    <td>Korean Language in Popular Media</td>
+                    <td>Spring 2021</td>
+                  </tr>
+                  <tr>
+                    <td>ESPM 162A</td>
+                    <td>Health, Medicine, Society, and Environment</td>
+                    <td>Fall 2020</td>
+                  </tr>
+                  <tr>
+                    <td>Music 27</td>
+                    <td>Introduction to Western Music</td>
+                    <td>Spring 2020</td>
+                  </tr>
+                  <tr>
+                    <td>BioE C131</td>
+                    <td>
+                      Introduction to Computational Molecular and Cell Biology
+                    </td>
+                    <td>Fall 2019</td>
+                  </tr>
+                  <tr>
+                    <td>Math W53</td>
+                    <td>Multivariable Calculus</td>
+                    <td>Summer 2019</td>
+                  </tr>
+                  <tr>
+                    <td>Colwrit R4B</td>
+                    <td>Reading, Composition, and Research: Modern Love</td>
+                    <td>Spring 2019</td>
+                  </tr>
+                  <tr>
+                    <td>Korean 187</td>
+                    <td>History and Memory in Korean Cinema</td>
+                    <td>Fall 2018</td>
+                  </tr>
+                  <tr>
+                    <td>Psych 1</td>
+                    <td>General Psychology</td>
+                    <td>Spring 2018</td>
+                  </tr>
+                  <tr>
+                    <td>Complit R1A</td>
+                    <td>
+                      English Composition in Connection with the Reading of
+                      World Literature:<br />What Is and What Could Be
+                    </td>
+                    <td>Fall 2018</td>
+                  </tr>
+                  <tr>
+                    <td>Sociol 1</td>
+                    <td>Introduction to Sociology</td>
+                    <td>Fall 2017</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <script>
+          var coll = document.getElementsByClassName("collapsible");
+          var i;
+
+          for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+              this.classList.toggle("active");
+              var content = this.nextElementSibling;
+              if (content.style.display === "block") {
+                content.style.display = "none";
+              } else {
+                content.style.display = "block";
+              }
+            });
+          }
+        </script>
+      </div>
+
+      <div id="extra" class="project1">
+        <div class="content-title">
+          <h3>Extracurriculars</h3>
+        </div>
+        <hr />
+        <div class="content">
+          <ul>
+            <li>
+              <h4>
+                <a href="pdatberkeley.com">Product Development at Berkeley</a>
+              </h4>
+            </li>
+            <li class="location">Spring 2020 - Fall 2020</li>
+          </ul>
+          <p>
+            During the Fall 2020 semester, I served as the Internal Vice
+            President of PDAB. I was in charge of internal affairs of the club
+            such as membership recruitment at the beginning of the semester, and
+            organizing (virtual) social events for PDAB members. I also
+            simultaneously worked as a consultant on the
+            <a href="#drone">Drones on Demand</a> (find more about it under my
+            <a href="projects.html">Projects</a> page) project this semester.
+          </p>
+          <p>
+            I also worked as the consulting tech team lead in Spring 2020, where
+            I led the tech team of 4 to consult for
+            <a href="http://trylunchable.com">Lunchable, Inc.</a> to work on the
+            <a href="#lunchable">Lunchable App</a> project also on my
+            <a href="projects.html">Projects</a> page.
+          </p>
+        </div>
+        <div class="content">
+          <ul>
+            <li>
+              <h4>
+                <a href="https://pcs.berkeley.edu/"
+                  >Political Computer Science @ Berkeley</a
+                >
+              </h4>
+            </li>
+            <li class="location">Fall 2018 - Fall 2019</li>
+          </ul>
+          <p>
+            I joined this club in Fall 2018 as a project analyst and worked on
+            projects like <a href="#activism">Engineering Activism</a>,
+            <a href="#call">Roll Call</a>, and
+            <a href="#crisis">Opioid Crisis</a> on my
+            <a href="projects.html">Projects</a> page.
+          </p>
+          <p>
+            From Spring 2019 to Fall 2019, I was also acting as the Internal
+            Vice President. I was in charge of running weekly meetings, managing
+            finances and budget, and organizing social events that were open to
+            all members. During the Fall 2019 semester, I was able to organize
+            and host the first ever PCS retreat at Monterey, CA.
+          </p>
+        </div>
+        <div class="content">
+          <ul>
+            <li><h4>UC Berkeley EECS Department</h4></li>
+            <li class="location">Summer 2018 - Fall 2019</li>
+          </ul>
+          <p>
+            During the semesters Fall 2018,
+            <a
+              href="https://inst.eecs.berkeley.edu/~cs61a/sp19/academic-interns.html"
+              >Spring 2019</a
+            >, Summer 2019, and
+            <a
+              href="https://inst.eecs.berkeley.edu/~cs61a/fa19/academic-interns.html"
+              >Fall 2019</a
+            >, I worked as an Academic Intern for CS61A: The Structure and
+            Interpretation of Computer Programs. I assisted students in the labs
+            and office hours with coursework in Python, SQL, and Scheme (a
+            dialect of Lisp). In Fall 2019, through CS370: Introduction to
+            Teaching Computer Science, I additionally provided 3 hours of
+            tutoring every week to students who signed up and received a review
+            of average 4.54 out of 5 for the whole semester.
+          </p>
+          <p>
+            In Summer 2018, I worked as a Lab Assistant for CS10: The Beauty and
+            Joy of Computing. I assisted students in the labs and office hours
+            with coursework in Snap! and Python. I also volunteered to tutor
+            individual students outside of the classroom for 2 hours a week.
+          </p>
+        </div>
+      </div>
     </div>
-    
-</body>
+  </body>
+</html>

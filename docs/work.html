@@ -1,97 +1,125 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Oswald:wght@300&display=swap" rel="stylesheet" />
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Oswald:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" type="text/css" href="base.css" media="screen" />
-    <link rel="icon" type="images/jpg" href="icons/banany.jpg" sizes="16x16">
+    <link rel="icon" type="images/jpg" href="icons/banany.jpg" sizes="16x16" />
     <title>Katie Kim</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-
-</head>
-<body>
+  </head>
+  <body>
     <div class="navbar">
-        <a href="index.html" title="Main page">K a t i e   K i m</a>
-        <a href="education.html" title="Education" id=proj>Education</a>
-        <a href="projects.html" title="Projects">Projects</a>
-        <a href="work.html" class="active" title="Work">Work</a>
-        <a href="resume.html" title="Resume">Resume</a>
-        <div class="dropdown">
-            <button class="dropbtn" onclick="showSpotify()">Spotify</button>
-            <div class="dropdown-content" id="spotify">
-                <iframe src="https://open.spotify.com/embed/playlist/45qG4cdbD2Ln1HyXZR9B5f" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-            </div>
+      <a href="index.html" title="Main page">K a t i e K i m</a>
+      <a href="education.html" title="Education" id="proj">Education</a>
+      <a href="projects.html" title="Projects">Projects</a>
+      <a href="work.html" class="active" title="Work">Work</a>
+      <a href="resume.html" title="Resume">Resume</a>
+      <div class="dropdown">
+        <button class="dropbtn" onclick="showSpotify()">Spotify</button>
+        <div class="dropdown-content" id="spotify">
+          <iframe
+            src="https://open.spotify.com/embed/playlist/45qG4cdbD2Ln1HyXZR9B5f"
+            width="300"
+            height="380"
+            frameborder="0"
+            allowtransparency="true"
+            allow="encrypted-media"
+          ></iframe>
         </div>
-        
+      </div>
 
+      <script>
+        function showSpotify() {
+          document.getElementById("spotify").classList.toggle("show");
+        }
 
-
-       
-        <script>
-
-            function showSpotify() {
-
-                document.getElementById("spotify").classList.toggle("show");
+        window.onclick = function (e) {
+          if (!e.target.matches(".dropbtn")) {
+            var drop = document.getElementById("spot");
+            if (drop.classList.contains("show")) {
+              drop.classList.remove("show");
             }
-
-            window.onclick = function(e) {
-                if (!e.target.matches(".dropbtn")) {
-                    var drop = document.getElementById("spot");
-                    if (drop.classList.contains("show")) {
-                        drop.classList.remove("show");
-                    }
-                }
-                
-            }
-        </script>
+          }
+        };
+      </script>
     </div>
     <div class="page-title">
-        <h1>Work</h1>
-        <div class="project1">
-            <div class="content-title">
-                <h3>
-                    Expedia Group
-                </h3>
-                <p>
-                    New Grad Software Development Engineer | Summer 2021 | Seattle, WA  
-                </p>
-                
-            </div>
-            <hr>
-            <p>
-                After my graduation in May 2021, I will be a full time SDE at Expedia (in Expedia Group) in Seattle. 
-            </p>
+      <h1>Work</h1>
+      <div class="project1">
+        <div class="content-title">
+          <h3>Expedia Group</h3>
+          <p>Software Development Engineer II | Present | Seattle, WA</p>
         </div>
-        <div class="project1">
-            
-            <div class="content-title">
-                <h3>
-                    Fibulas, Inc. at Berkeley SkyDeck 
-                </h3>
-                <p>
-                    Product Manager | Fall 2020 | Berkeley, CA 
-                </p>
-            </div>
-            <hr>
-            <p>
-                Working closely with a client based at the University of Pittsburgh School of Medicine, I created a Django web application from scratch that was a database interface for Fibulas, Inc.'s BioUSB cryopreservation technology. 
-                Users were able to organize, and keep track of check in/out data of samples that were in BioUSBs.
-            </p>
+        <hr />
+        <p>
+          I have been a Software Developer Engineer at Expedia Group since
+          September 2021. During my first year, I was on the new grad rotational
+          program and I got to work for 6 months each on 2 different teams.
+        </p>
+        <p>
+          First, I worked with Virtual Market Coach, which was a tool that
+          Expedia Lodging Partners (e.g. hotel managers, other devs, etc.) used
+          to gain insight and tips on how to increase their business through
+          different kind of promotions and deals they could activate for their
+          logdging listing. Here, I created end-to-end a tool that internal
+          users (e.g. Expedia Group devs) to easily look up a list of properties
+          that had a specific promotion type.
+        </p>
+        <p>
+          Then I was on the front-end team for the Virtual Agent Control. I
+          specialized in accessibility engineering and made sure that both web
+          and mobile versions of the virtual agent was not only compliant with
+          legal accessibilty standards but also seamlessly useable by any user.
+          I also helped decrease cloud costs for the team by significantly
+          decreasing (by 10 fold!) file sizes of reference images that we were
+          storing to run browser compatibility checks against by adding a
+          cropping function in the test.
+        </p>
+        <p>
+          Currently I'm working on the Identity team as an SDE II, and we've had
+          a really big project that just launched called One Identity. This
+          feature integrates the login for all Expedia affiliated brands
+          (Expedia.com, Vrbo.com, and Hotels.com) into one profile, and one
+          credential set. I was specifically helping with onboarding Vrbo
+          authentication systems to the One Identity platform. I also worked on
+          automating our team's CICD to take advantage of the serverless aspect
+          of Github Actions.
+        </p>
+      </div>
+      <div class="project1">
+        <div class="content-title">
+          <h3>Fibulas, Inc. at Berkeley SkyDeck</h3>
+          <p>Product Manager | Fall 2020 | Berkeley, CA</p>
         </div>
-        <div class="project1">
-            <div class="content-title">
-                <h3>
-                    Lunchable, Inc. at Berkeley SkyDeck
-                </h3>
-                <p>
-                    Lead Full Stack Engineer | Summer 2020 | Berkeley, CA 
-                </p>
-            </div>
-            <hr>
-            <p>
-                I worked with 5 other software engineering interns to create a Django web application from scratch to help college students match with peers of similar interests using a hierarchical clustering machine learning algorithm. 
-                Users were sent weekly notifications of their time for meeting, creating a group chat with Agora video conferencing API integrated so that they can meet virtually during the COVID19 pandemic. 
-            </p>
+        <hr />
+        <p>
+          Working closely with a client based at the University of Pittsburgh
+          School of Medicine, I created a Django web application from scratch
+          that was a database interface for Fibulas, Inc.'s BioUSB
+          cryopreservation technology. Users were able to organize, and keep
+          track of check in/out data of samples that were in BioUSBs.
+        </p>
+      </div>
+      <div class="project1">
+        <div class="content-title">
+          <h3>Lunchable, Inc. at Berkeley SkyDeck</h3>
+          <p>Lead Full Stack Engineer | Summer 2020 | Berkeley, CA</p>
         </div>
+        <hr />
+        <p>
+          I worked with 5 other software engineering interns to create a Django
+          web application from scratch to help college students match with peers
+          of similar interests using a hierarchical clustering machine learning
+          algorithm. Users were sent weekly notifications of their time for
+          meeting, creating a group chat with Agora video conferencing API
+          integrated so that they can meet virtually during the COVID19
+          pandemic.
+        </p>
+      </div>
     </div>
-</body>
+  </body>
+</html>
