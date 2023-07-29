@@ -14,11 +14,11 @@
   </head>
 
   <body>
-    <div class="nav">
+    <div id="nav">
     </div>
     <script>
-      $.get("navigation.html", function(data){
-          $("#nav-placeholder").replaceWith(data);
+      $(function(){
+          $("#nav").load("nav.html");
       });
       </script>
     <div class="page-title">
@@ -44,7 +44,7 @@
           double major in Compuer Science, and Molecular and Cell Biology with
           emphasis on Biochemistry and Molecular Biology (Track 1). I often
           introduce myself as a Korean from Canada studying in the US, but since
-          leaving Berkeley in August 2021, I've also graduated from that phrase.
+          leaving Berkeley in August 2021, I feel like I've also graduated from that phrase.
         </p>
         <p>
           I've been working as a Software Development Engineer at Expedia Group
