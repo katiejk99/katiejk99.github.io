@@ -13,41 +13,13 @@
   </head>
 
   <body>
-    <div class="navbar">
-      <a href="index.html" title="Main page">K a t i e K i m</a>
-      <a href="education.html" title="Education" id="proj">Education</a>
-      <a href="projects.html" title="Projects">Projects</a>
-      <a href="work.html" title="Work">Work</a>
-      <a class="active" href="resume.html" title="Resume">Resume</a>
-      <div class="dropdown">
-        <button class="dropbtn" onclick="showSpotify()">Spotify</button>
-        <div class="dropdown-content" id="spotify">
-          <iframe
-            src="https://open.spotify.com/embed/playlist/45qG4cdbD2Ln1HyXZR9B5f"
-            width="300"
-            height="380"
-            frameborder="0"
-            allowtransparency="true"
-            allow="encrypted-media"
-          ></iframe>
-        </div>
-      </div>
-
-      <script>
-        function showSpotify() {
-          document.getElementById("spotify").classList.toggle("show");
-        }
-
-        window.onclick = function (e) {
-          if (!e.target.matches(".dropbtn")) {
-            var drop = document.getElementById("spot");
-            if (drop.classList.contains("show")) {
-              drop.classList.remove("show");
-            }
-          }
-        };
-      </script>
+    <div id="nav">
     </div>
+    <script>
+      $(function(){
+          $("#nav").load("nav.html");
+      });
+      </script>
     <div class="page-title">
       <h1>Resume</h1>
     </div>
