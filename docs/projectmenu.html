@@ -1,0 +1,76 @@
+<div id="sidenav" class="sidenav">
+  <a href="#drone" id="dod">Drone on Demand</a>
+  <a href="#sim" id="smoke">2D Smoke Simulator</a>
+  <a href="#lunchable" id="lunch">Lunchable App</a>
+  <a href="#crisis" id="opioid">Opioid Crisis</a>
+  <a href="#call" id="roll">Roll Call</a>
+  <a href="#activism" id="engineer">Engineering Activism</a>
+</div>
+<script>
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+      if ((document.body.scrollTop > document.querySelector("#drone").offsetTop - 30 && document.body.scrollTop < document.querySelector("#drone").offsetHeight + document.querySelector("#drone").offsetTop) || (document.documentElement.scrollTop > document.querySelector("#drone").offsetTop - 30 && document.documentElement.scrollTop < document.querySelector("#drone").offsetHeight + document.querySelector("#drone").offsetTop) ) {
+          document.getElementById("dod").style.right = "0";
+          document.getElementById("smoke").style.right = "-180px";
+          document.getElementById("lunch").style.right = "-180px";
+          document.getElementById("opioid").style.right = "-180px";
+          document.getElementById("roll").style.right = "-180px";
+          document.getElementById("engineer").style.right = "-180px";
+
+      }
+      else if ((document.body.scrollTop > document.querySelector("#sim").offsetTop - 30 && document.body.scrollTop < document.querySelector("#sim").offsetHeight + document.querySelector("#sim").offsetTop) || (document.documentElement.scrollTop > document.querySelector("#sim").offsetTop - 30 && document.documentElement.scrollTop < document.querySelector("#sim").offsetHeight + document.querySelector("#sim").offsetTop) ) {
+          document.getElementById("dod").style.right = "-180px";
+          document.getElementById("smoke").style.right = "0";
+          document.getElementById("lunch").style.right = "-180px";
+          document.getElementById("opioid").style.right = "-180px";
+          document.getElementById("roll").style.right = "-180px";
+          document.getElementById("engineer").style.right = "-180px";
+
+      }
+      else if ((document.body.scrollTop > document.querySelector("#lunchable").offsetTop - 30 && document.body.scrollTop < document.querySelector("#lunchable").offsetHeight + document.querySelector("#lunchable").offsetTop) || (document.documentElement.scrollTop > document.querySelector("#lunchable").offsetTop - 30 && document.documentElement.scrollTop < document.querySelector("#lunchable").offsetHeight + document.querySelector("#lunchable").offsetTop) ) {
+          document.getElementById("dod").style.right = "-180px";
+          document.getElementById("smoke").style.right = "-180px";
+          document.getElementById("lunch").style.right = "0";
+          document.getElementById("opioid").style.right = "-180px";
+          document.getElementById("roll").style.right = "-180px";
+          document.getElementById("engineer").style.right = "-180px";
+
+      }
+      else if ((document.body.scrollTop > document.querySelector("#crisis").offsetTop - 30 && document.body.scrollTop < document.querySelector("#crisis").offsetHeight + document.querySelector("#crisis").offsetTop) || (document.documentElement.scrollTop > document.querySelector("#crisis").offsetTop - 30 && document.documentElement.scrollTop < document.querySelector("#crisis").offsetHeight + document.querySelector("#crisis").offsetTop) ) {
+          document.getElementById("dod").style.right = "-180px";
+          document.getElementById("smoke").style.right = "-180px";
+          document.getElementById("lunch").style.right = "-180px";
+          document.getElementById("opioid").style.right = "0";
+          document.getElementById("roll").style.right = "-180px";
+          document.getElementById("engineer").style.right = "-180px";
+
+      }
+      else if ((document.body.scrollTop > document.querySelector("#call").offsetTop - 30 && document.body.scrollTop < document.querySelector("#call").offsetHeight + document.querySelector("#call").offsetTop) || (document.documentElement.scrollTop > document.querySelector("#call").offsetTop - 30 && document.documentElement.scrollTop < document.querySelector("#call").offsetHeight + document.querySelector("#call").offsetTop) ) {
+          document.getElementById("dod").style.right = "-180px";
+          document.getElementById("smoke").style.right = "-180px";
+          document.getElementById("lunch").style.right = "-180px";
+          document.getElementById("opioid").style.right = "-180px";
+          document.getElementById("roll").style.right = "0";
+          document.getElementById("engineer").style.right = "-180px";
+
+      }
+      else if ((document.body.scrollTop > document.querySelector("#activism").offsetTop - 30 && document.body.scrollTop < document.querySelector("#activism").offsetHeight + document.querySelector("#activism").offsetTop) || (document.documentElement.scrollTop > document.querySelector("#activism").offsetTop - 30 && document.documentElement.scrollTop < document.querySelector("#activism").offsetHeight + document.querySelector("#activism").offsetTop) ) {
+          document.getElementById("dod").style.right = "-180px";
+          document.getElementById("smoke").style.right = "-180px";
+          document.getElementById("lunch").style.right = "-180px";
+          document.getElementById("opioid").style.right = "-180px";
+          document.getElementById("roll").style.right = "-180px";
+          document.getElementById("engineer").style.right = "0";
+
+      }
+      else {
+          document.getElementById("dod").style.right = "-180px";
+          document.getElementById("smoke").style.right = "-180px";
+          document.getElementById("lunch").style.right = "-180px";
+          document.getElementById("opioid").style.right = "-180px";
+          document.getElementById("roll").style.right = "-180px";
+          document.getElementById("engineer").style.right = "-180px";
+      }
+  }
+</script>
