@@ -1,9 +1,9 @@
-<div class="navbar">
-  <a href="index.html" title="Main page">K a t i e K i m</a>
-  <a href="education.html" title="Education">Education</a>
-  <a href="projects.html" title="Projects">Projects</a>
-  <a href="work.html" title="Work">Work</a>
-  <a href="resume.html" title="Resume">Resume</a>
+<div class="navbar" id="nav">
+  <a href="index.html" title="Main page" id="mainPage" onclick="highlightNavItem()">K a t i e K i m</a>
+  <a href="education.html" title="Education" id="education" onclick="highlightNavItem()">Education</a>
+  <a href="projects.html" title="Projects" id="projects" onclick="highlightNavItem()">Projects</a>
+  <a href="work.html" title="Work" id="work" onclick="highlightNavItem()">Work</a>
+  <a href="resume.html" title="Resume" id="resume" onclick="highlightNavItem()">Resume</a>
 
   <div class="dropdown">
     <button class="dropbtn" onclick="showSpotify()">Spotify</button>
@@ -36,8 +36,13 @@
     };
   </script>
   <script>
-    $(".navbar a").click(function() {
-      $(".")
-    })
+    function highlightNavItem() {
+      window.onclick = function (e) {
+        document
+          .getElementsByClassName("navbar a")
+          .forEach((navItem) => navItem.classList.remove("active"));
+      };
+      document.getElementById(e.target.id).classList.toggle("active");
+    }
   </script>
 </div>
