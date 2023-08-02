@@ -38,7 +38,7 @@ img.two {
   /* top: 0; Position the navbar at the top of the page */
   width: 100%; /* Full width */
   float: left;
-  z-index: index max;
+  z-index: 999;
 }
 
 .navbar a {
@@ -222,7 +222,7 @@ a:visited {
 .project1 {
   margin: auto;
   width: auto;
-  max-width: 80%;
+  max-width: 90%;
   padding-top: 7%;
   padding-bottom: 7%;
 }
@@ -402,6 +402,7 @@ ul.linklist li:hover {
   margin-bottom: none;
   padding-bottom: none;
   font-family: inherit;
+  margin:0;
 }
 
 .collapsible:hover {
