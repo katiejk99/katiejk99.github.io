@@ -16,6 +16,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script>document.documentElement.classList.add("js");</script>
   </head>
 
   <body>
@@ -34,244 +35,181 @@
     </svg>
 
     <header class="topbar">
-      <a class="logo" href="#top" aria-label="Katie Kim, home">
+      <a class="logo" href="#about" aria-label="Katie Kim, home">
         <svg aria-hidden="true"><use href="#banana" /></svg>
         Katie Kim
       </a>
-      <span class="mono">Field notes · Bay Area, CA</span>
+      <span class="mono">Full-stack Engineer · Bay Area, CA</span>
     </header>
 
     <div class="book" id="top">
       <aside class="tabs">
         <nav aria-label="Sections">
           <a href="#about" style="--c: var(--yellow)">about</a>
-          <a href="#work" style="--c: var(--mint)">work</a>
-          <a href="#toolbox" style="--c: var(--sky)">toolbox</a>
-          <a href="#fun" style="--c: var(--peach)">off the clock</a>
-          <a href="#contact" style="--c: var(--yellow)">say hi</a>
+          <a href="#experience" style="--c: var(--mint)">experience</a>
+          <a href="#skills" style="--c: var(--sky)">skills</a>
+          <a href="#projects" style="--c: var(--peach)">projects</a>
+          <a href="#education" style="--c: var(--yellow)">education</a>
+          <a href="#off-the-clock" style="--c: var(--mint)">off the clock</a>
+          <a href="#contact" style="--c: var(--sky)">contact</a>
         </nav>
       </aside>
 
       <main class="paper">
-        <!-- ============ HERO ============ -->
-        <div class="hero">
-          <div>
-            <span class="mono">Plate I — a specimen of</span>
-            <h1>Katie Kim</h1>
-            <p class="latin">
-              Ingeniaria plenae-acervus, var.
-              <span class="hl">platforma interna</span>
-            </p>
-            <p class="lede">
-              Full-stack engineer with 5 years shipping production web apps,
-              APIs and enterprise integrations at <b>Snap</b> and
-              <b>Expedia</b>. I own internal platforms end to end, from
-              discovery and architecture through launch and production support.
-            </p>
-            <ul class="todo">
-              <li>Replace a spreadsheet with an auditable app</li>
-              <li>Ship an AI assistant people actually trust</li>
-              <li>Finish the Niagara 10K</li>
-              <li class="open">Your project? <a href="#contact">say hi</a></li>
-            </ul>
-            <a class="btn" href="#work">See my work</a>
-            <a class="btn alt" href="Katie_Kim_Resume.pdf" target="_blank" rel="noopener">Resume ↓</a>
-          </div>
-
-          <div class="specimen">
-            <figure class="polaroid" style="margin: 0">
-              <span class="tape" aria-hidden="true"></span>
-              <img src="icons/katie.jpg" alt="Katie smiling, sunglasses pushed up on her head, on a narrow stone street" width="720" height="720" />
-              <figcaption>Fig. 1 — subject in the field</figcaption>
-            </figure>
-            <span class="label l1" aria-hidden="true"
-              ><svg viewBox="0 0 46 30"><path d="M44 28C30 26 14 18 4 4m0 0 1 8m-1-8 8 2" /></svg>sunglasses<br />(on standby)</span
-            >
-            <span class="label l2" aria-hidden="true"
-              ><svg viewBox="0 0 46 30"><path d="M2 4C14 4 30 10 42 24m0 0-1-8m1 8-8-2" /></svg>probably<br />looking for food</span
-            >
-          </div>
-        </div>
-
         <!-- ============ ABOUT ============ -->
         <section id="about">
-          <div class="sec-head"><h2>About</h2><span class="mono">notes on the subject</span></div>
+          <div class="hero">
+            <div>
+              <h1>Katie Kim</h1>
+              <p class="title-line">Full-stack Engineer · Snap Inc.</p>
+              <p class="lede">
+                Full-stack engineer with 5 years of experience shipping
+                production web applications, APIs and enterprise integrations at
+                <b>Snap</b> and <b>Expedia</b>. I own internal platforms end to
+                end, from discovery and architecture through launch and
+                production support.
+              </p>
+              <a class="btn" href="#experience">Experience</a>
+              <a class="btn alt" href="Katie_Kim_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+            </div>
+
+            <div class="photo">
+              <figure class="polaroid" style="margin: 0">
+                <span class="tape" aria-hidden="true"></span>
+                <img src="icons/katie.jpg" alt="Portrait of Katie Kim" width="720" height="720" />
+                <figcaption>Katie Kim</figcaption>
+              </figure>
+            </div>
+          </div>
+
           <div class="about">
             <div>
               <p>
                 I'm a Systems Engineer on Snap's Enterprise Engineering team in
-                Palo Alto. I like the unglamorous, high-leverage work: replacing
-                spreadsheets and access workarounds with auditable apps, and
-                turning a busy support queue into an
-                <span class="hl m">AI assistant people actually trust</span>.
+                Palo Alto. I build internal tools: auditable business
+                applications, access and identity systems, and AI assistants for
+                IT support.
               </p>
               <p>
-                Right now I'm the sole engineer (and PM) on Snap's IT Budget
+                I'm currently the sole engineer and PM on Snap's IT Budget
                 Portal and tech lead on SnappyBot, a multi-agent IT-support
-                assistant built on Vertex AI and Gemini. Before Snap, I built
-                cloud pipelines for genomic sequencing data at a biotech
+                assistant built on Vertex AI and Gemini. Previously, I built
+                cloud data pipelines for genomic sequencing at a biotech
                 startup, and worked on identity and accessibility at Expedia
                 Group.
               </p>
               <p>
                 I studied Computer Science and Molecular &amp; Cell Biology at
-                UC Berkeley, which is why this page looks like a lab notebook.
+                UC Berkeley.
               </p>
             </div>
             <ul class="facts">
-              <li><span class="mono">Now</span><span>Systems Engineer @ Snap</span></li>
-              <li><span class="mono">Based</span><span>Bay Area, CA</span></li>
-              <li><span class="mono">Grew up</span><span>Calgary, Canada</span></li>
-              <li><span class="mono">Studied</span><span>BA CS + BA MCB, UC Berkeley</span></li>
-              <li><span class="mono">Speaks</span><span>English, Korean, French, Hindi, Spanish</span></li>
+              <li><span class="mono">Role</span><span>Systems Engineer, Snap</span></li>
+              <li><span class="mono">Location</span><span>Bay Area, CA</span></li>
+              <li><span class="mono">Hometown</span><span>Calgary, Canada</span></li>
+              <li><span class="mono">Education</span><span>BA CS + BA MCB, UC Berkeley</span></li>
+              <li><span class="mono">Languages</span><span>English, Korean, French, Hindi, Spanish</span></li>
             </ul>
           </div>
         </section>
 
-        <!-- ============ WORK ============ -->
-        <section id="work">
-          <div class="sec-head"><h2>Observations</h2><span class="mono">work, 2021 — present</span></div>
+        <!-- ============ EXPERIENCE ============ -->
+        <section id="experience">
+          <div class="sec-head"><h2>Experience</h2></div>
 
           <article class="obs">
             <div class="margin">
-              <div class="no">No. 3</div>
-              <div class="mono">Apr 2025 – now</div>
-              <div class="mono">Palo Alto</div>
+              <div class="mono">Apr 2025 – Present</div>
+              <div class="mono">Palo Alto, CA</div>
             </div>
             <div>
               <h3>Snap Inc.</h3>
               <div class="role">Systems Engineer, Enterprise Engineering</div>
               <ul>
-                <li>Sole engineer and PM building the <span class="hl">IT Budget Portal</span>, an auditable full-stack app replacing the IT org's spreadsheet-based annual budget planning; other orgs are already exploring adoption.</li>
+                <li>Sole engineer and PM building the IT Budget Portal, an auditable full-stack app replacing the IT org's spreadsheet-based annual budget planning; other orgs are already exploring adoption.</li>
                 <li>Delivered the NPL portal end to end in one quarter as sole engineer, replacing an unmanaged access workaround for SpecsLabs.</li>
-                <li>Tech lead for <span class="hl">SnappyBot</span>, a multi-agent IT-support AI live in 19 Slack channels; built its core RAG engine on Vertex AI and Gemini.</li>
+                <li>Tech lead for SnappyBot, a multi-agent IT-support AI live in 19 Slack channels; built its core RAG engine on Vertex AI and Gemini.</li>
                 <li>Took Glean custom actions from design to company-wide launch and built the custom connector SDK.</li>
                 <li>Led infrastructure for a self-hosted visitor and physical-access system covering ~7,000 identities.</li>
                 <li>Rebuilt the IT AI hackathon portal into a config-driven multi-event platform in under 2 weeks.</li>
               </ul>
-              <span class="stamp" style="--c: var(--yellow)">current habitat</span>
             </div>
           </article>
 
           <article class="obs">
             <div class="margin">
-              <div class="no">No. 2</div>
               <div class="mono">Dec 2023 – Jan 2025</div>
-              <div class="mono">Foster City</div>
+              <div class="mono">Foster City, CA</div>
             </div>
             <div>
               <h3>Stealth Biotech</h3>
               <div class="role">Cloud Software Engineer</div>
               <ul>
-                <li>Built a system to upload FASTQ files to AWS S3 and trigger sequencing-analysis workflows from the platform UI, with archival policies that cut S3 bucket size by <span class="hl">over 90%</span>.</li>
-                <li>Led IAM work on user permissions, scopes and Cognito user pools, integrating AWS SES for more complex invite flows.</li>
-                <li>Built automated QA with CloudWatch Agent, OpenSearch and Slack for real-time alerts and dashboards.</li>
+                <li>Developed and optimized a system to upload FASTQ files to AWS S3, making data available in the platform UI to asynchronously trigger sequencing-analysis workflows, with archival policies that reduced S3 bucket size by over 90%.</li>
+                <li>Led IAM initiatives on user permissions, scopes and Cognito user pool management, integrating AWS SES for more complex user invite flows.</li>
+                <li>Built automated QA systems with CloudWatch Agent, OpenSearch and Slack for real-time alerts and dashboard visualizations.</li>
               </ul>
-              <span class="stamp" style="--c: var(--mint)">where biology met software</span>
             </div>
           </article>
 
           <article class="obs">
             <div class="margin">
-              <div class="no">No. 1</div>
               <div class="mono">Sep 2021 – Dec 2023</div>
-              <div class="mono">Seattle</div>
+              <div class="mono">Seattle, WA</div>
             </div>
             <div>
               <h3>Expedia Group</h3>
               <div class="role">Software Development Engineer</div>
               <p class="sub">Identity <span>Oct 2022 – Dec 2023</span></p>
               <ul>
-                <li>Integrated Vrbo authentication into the One Identity platform, launched publicly in July 2023.</li>
-                <li>Reduced cloud costs by automating CI/CD build and test pipelines on serverless GitHub Actions.</li>
+                <li>Integrated Vrbo authentication systems into the One Identity platform, launched publicly in July 2023.</li>
+                <li>Reduced cloud costs by automating CI/CD build and test pipelines with serverless GitHub Actions.</li>
               </ul>
-              <p class="sub">Virtual Agent Control <span>Mar – Sep 2022</span></p>
+              <p class="sub">Virtual Agent Control <span>Mar 2022 – Sep 2022</span></p>
               <ul>
-                <li>Specialized in accessibility engineering for seamless screen reader support across devices, OSes and browsers.</li>
-                <li>Shrunk browser-test reference screenshots by 90% with a custom DOM-based cropping function.</li>
+                <li>Specialized in accessibility engineering for screen reader support across devices, operating systems and browsers.</li>
+                <li>Reduced reference screenshot sizes for browser compatibility tests by 90% with a custom DOM-based cropping function.</li>
               </ul>
               <p class="sub">Virtual Market Coach <span>Jun 2021 – Mar 2022</span></p>
               <ul>
-                <li>Built an internal tool end to end for Expedia Partner Central, streamlining queries for properties and promotion types.</li>
+                <li>Developed an internal tool end to end for Expedia Partner Central, streamlining queries for properties and promotion types.</li>
               </ul>
-              <span class="stamp" style="--c: var(--sky)">first sighting</span>
             </div>
           </article>
+          <p><a class="btn alt" href="Katie_Kim_Resume.pdf" target="_blank" rel="noopener">Full resume (PDF)</a></p>
         </section>
 
-        <!-- ============ TOOLBOX ============ -->
-        <section id="toolbox">
-          <div class="sec-head"><h2>Classification</h2><span class="mono">tools, by family</span></div>
+        <!-- ============ SKILLS ============ -->
+        <section id="skills">
+          <div class="sec-head"><h2>Skills</h2></div>
           <div class="stickies">
-            <div class="sticky" style="--c: var(--yellow)"><span class="mono">Languages</span><b>TypeScript, Python</b><p>JavaScript · SQL · Go · Java · Bash · C/C++ · Starlark</p></div>
-            <div class="sticky" style="--c: var(--mint); --r: 1.2deg"><span class="mono">AI &amp; LLM</span><b>Vertex AI, Gemini</b><p>RAG Engine · Agent Engine · Google ADK · GenAI SDK · LangChain · Ragas · MCP · Glean APIs · reranking &amp; RRF</p></div>
-            <div class="sticky" style="--c: var(--sky); --r: -.6deg"><span class="mono">Frontend</span><b>React</b><p>React Router · Vite · HTML/CSS · Playwright · WCAG 2.2 (axe)</p></div>
-            <div class="sticky" style="--c: var(--peach); --r: .8deg"><span class="mono">Backend &amp; APIs</span><b>Node.js, FastAPI</b><p>Fastify · Flask · Django · gRPC · REST/OpenAPI · OAuth 2.0/JWT · Pydantic</p></div>
-            <div class="sticky" style="--c: var(--yellow); --r: -1.4deg"><span class="mono">Data</span><b>Spanner, Postgres</b><p>BigQuery · Firestore · Redis · DynamoDB</p></div>
-            <div class="sticky" style="--c: var(--mint); --r: 1deg"><span class="mono">Cloud &amp; infra</span><b>GCP, AWS</b><p>Cloud Run · Pub/Sub · Lambda · Terraform · Ansible · Docker · Kubernetes · GitHub Actions · Datadog</p></div>
-          </div>
-        </section>
-
-        <!-- ============ FUN ============ -->
-        <section id="fun">
-          <div class="sec-head"><h2>Off the clock</h2><span class="mono">field observations, non-work</span></div>
-          <div class="fun">
-          <figure class="polaroid race">
-            <span class="tape" aria-hidden="true"></span>
-            <img src="icons/niagara-10k.jpg" alt="Katie running the Niagara Falls 10K in a white top, sunglasses and bib 5490" width="600" height="800" loading="lazy" />
-            <figcaption>Fig. 2 — Niagara 10K, bib 5490</figcaption>
-          </figure>
-          <div class="stickies">
-            <div class="sticky" style="--c: var(--peach); --r: -1deg">
-              <span class="mono">Habitat: restaurants</span>
-              <b>Professionally hungry</b>
-              <p>I post where I eat on Instagram at <a href="https://www.instagram.com/hungy_kt/">@hungy_kt</a>.</p>
-            </div>
-            <div class="sticky" style="--c: var(--yellow); --r: 1.1deg">
-              <span class="mono">Ranked, obviously</span>
-              <b>Beli, too</b>
-              <p>Every meal gets a score. Follow my rankings at <a href="https://beliapp.co/app/ktkim">@ktkim</a>.</p>
-            </div>
-            <div class="sticky" style="--c: var(--mint); --r: -.5deg">
-              <span class="mono">Migration observed</span>
-              <b>Runner</b>
-              <p>I run, and I've crossed the finish line at the Niagara 10K (that's me in Fig. 2). Ask me about my next race.</p>
-            </div>
-            <div class="sticky" style="--c: var(--sky); --r: .7deg">
-              <span class="mono">Vocalizations</span>
-              <b>Five languages</b>
-              <p>English, Korean, French, Hindi and Spanish.</p>
-            </div>
-            <div class="sticky" style="--c: var(--paper); --r: -1.3deg">
-              <span class="mono">Also observed</span>
-              <b>Cello &amp; golf</b>
-              <p>Plays cello in ensembles; will talk you into nine holes.</p>
-            </div>
-            <div class="sticky" style="--c: var(--yellow); --r: .9deg">
-              <span class="mono">Mascot</span>
-              <b>One banana</b>
-              <p>It's been the favicon since 2020. It stays.</p>
-            </div>
-          </div>
+            <div class="sticky" style="--c: var(--yellow)"><b>Languages</b><p>TypeScript · JavaScript · Python · SQL · Go · Java · Bash · C/C++ · Starlark</p></div>
+            <div class="sticky" style="--c: var(--mint); --r: 1.2deg"><b>AI &amp; LLM</b><p>Vertex AI (RAG Engine, Agent Engine) · Gemini 2.5 Pro/Flash · Gemini embeddings · Google ADK · Google GenAI SDK · LangChain · Ragas · MCP · Glean APIs · RAG, reranking &amp; RRF</p></div>
+            <div class="sticky" style="--c: var(--sky); --r: -.6deg"><b>Frontend</b><p>React · React Router · Vite · HTML/CSS · Playwright · WCAG 2.2 (axe)</p></div>
+            <div class="sticky" style="--c: var(--peach); --r: .8deg"><b>Backend &amp; APIs</b><p>Node.js · Fastify · FastAPI · Flask · Django · gRPC · REST/OpenAPI · OAuth 2.0/JWT · Pydantic</p></div>
+            <div class="sticky" style="--c: var(--yellow); --r: -1.4deg"><b>Databases</b><p>Cloud Spanner · PostgreSQL (Cloud SQL) · BigQuery · Firestore · Redis · DynamoDB</p></div>
+            <div class="sticky" style="--c: var(--mint); --r: 1deg"><b>Cloud &amp; infra</b><p>GCP (Cloud Run, Pub/Sub) · AWS (Lambda, S3, Cognito) · Terraform · Ansible · Docker · Kubernetes</p></div>
+            <div class="sticky" style="--c: var(--sky); --r: -.8deg"><b>CI/CD &amp; observability</b><p>GitHub Actions · pytest · Grafana · Datadog · Splunk · CloudWatch</p></div>
+            <div class="sticky" style="--c: var(--peach); --r: 1.1deg"><b>AI dev tools</b><p>Claude Code (skills, plugins, agents) · OpenAI Codex · Gemini Enterprise · Cursor · NotebookLM</p></div>
           </div>
         </section>
 
         <!-- ============ PROJECTS ============ -->
         <section id="projects">
-          <div class="sec-head"><h2>Earlier samples</h2><span class="mono">collected at Berkeley</span></div>
+          <div class="sec-head"><h2>Projects</h2><span class="mono">UC Berkeley, 2018 – 2020</span></div>
           <div class="samples">
-            <div class="sample"><span class="mono">2020 · CS184</span><h4>2D Smoke Simulator</h4><p>WebGL + Three.js fluid sim solving Navier-Stokes.</p><a href="https://katiejk99.github.io/smoke-simulator/">view →</a></div>
-            <div class="sample"><span class="mono">2019 · Political CS</span><h4>Roll Call</h4><p>Voting blocs in Congress via graph clustering.</p><a href="https://github.com/PoliticalComputerScience/RollCall">github →</a></div>
-            <div class="sample"><span class="mono">2020 · SkyDeck</span><h4>Lunchable</h4><p>Peer matching and auto-scheduled meetups during COVID.</p></div>
-            <div class="sample"><span class="mono">2020 · SkyDeck</span><h4>Fibulas BioUSB</h4><p>Django tracker for cryopreserved samples.</p></div>
-            <div class="sample"><span class="mono">2020 · PD@B</span><h4>Drone on Demand</h4><p>Uber-style demo app for on-call drone footage.</p></div>
-            <div class="sample"><span class="mono">2018 · Political CS</span><h4>Engineering Activism</h4><p>Recommender for relevant legislation.</p></div>
+            <div class="sample"><span class="mono">2020 · CS184</span><h4>2D Smoke Simulator</h4><p>Web-based fluid simulation in WebGL and Three.js using the Navier-Stokes equations.</p><a href="https://katiejk99.github.io/smoke-simulator/">View project →</a></div>
+            <div class="sample"><span class="mono">2019 · Political CS</span><h4>Roll Call</h4><p>Identified voting blocs in the US Congress using graph clustering.</p><a href="https://github.com/PoliticalComputerScience/RollCall">GitHub →</a></div>
+            <div class="sample"><span class="mono">2020 · Berkeley SkyDeck</span><h4>Lunchable</h4><p>Peer-matching service with automated meeting scheduling.</p></div>
+            <div class="sample"><span class="mono">2020 · Berkeley SkyDeck</span><h4>Fibulas BioUSB</h4><p>Django application for tracking cryopreserved samples.</p></div>
+            <div class="sample"><span class="mono">2020 · PD@B</span><h4>Drone on Demand</h4><p>Demo web app for on-demand drone footage requests.</p></div>
+            <div class="sample"><span class="mono">2018 · Political CS</span><h4>Engineering Activism</h4><p>Recommender system for relevant legislation.</p></div>
           </div>
         </section>
 
         <!-- ============ EDUCATION ============ -->
         <section id="education">
-          <div class="sec-head"><h2>Education</h2><span class="mono">degrees &amp; certifications</span></div>
+          <div class="sec-head"><h2>Education</h2></div>
           <div class="prov">
             <div>
               <span class="mono">University of California, Berkeley · Class of 2021</span>
@@ -286,18 +224,62 @@
           </div>
         </section>
 
+        <!-- ============ OFF THE CLOCK ============ -->
+        <section id="off-the-clock">
+          <div class="sec-head"><h2>Off the clock</h2></div>
+          <div class="fun">
+            <figure class="polaroid race">
+              <span class="tape" aria-hidden="true"></span>
+              <img src="icons/niagara-10k.jpg" alt="Katie running the Niagara Falls 10K in a white top, sunglasses and bib 5490" width="600" height="800" loading="lazy" />
+              <figcaption>Niagara Falls 10K · bib 5490</figcaption>
+            </figure>
+            <div class="stickies">
+              <div class="sticky" style="--c: var(--peach); --r: -1deg">
+                <span class="mono">Habitat: restaurants</span>
+                <b>Professionally hungry</b>
+                <p>I post where I eat on Instagram at <a href="https://www.instagram.com/hungy_kt/">@hungy_kt</a>.</p>
+              </div>
+              <div class="sticky" style="--c: var(--yellow); --r: 1.1deg">
+                <span class="mono">Ranked, obviously</span>
+                <b>Beli, too</b>
+                <p>Every meal gets a score. Follow my rankings at <a href="https://beliapp.co/app/ktkim">@ktkim</a>.</p>
+              </div>
+              <div class="sticky" style="--c: var(--mint); --r: -.5deg">
+                <span class="mono">Migration observed</span>
+                <b>Runner</b>
+                <p>I run, and I've crossed the finish line at the Niagara 10K (that's me in the photo). Ask me about my next race.</p>
+              </div>
+              <div class="sticky" style="--c: var(--sky); --r: .7deg">
+                <span class="mono">Vocalizations</span>
+                <b>Five languages</b>
+                <p>English, Korean, French, Hindi and Spanish.</p>
+              </div>
+              <div class="sticky" style="--c: var(--paper); --r: -1.3deg">
+                <span class="mono">Also observed</span>
+                <b>Cello &amp; golf</b>
+                <p>Plays cello in ensembles; will talk you into nine holes.</p>
+              </div>
+              <div class="sticky" style="--c: var(--yellow); --r: .9deg">
+                <span class="mono">Mascot</span>
+                <b>One banana</b>
+                <p>It's been the favicon since 2020. It stays.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <!-- ============ CONTACT ============ -->
         <section id="contact" class="contact">
-          <h2>Say hi</h2>
-          <p>Happy to talk internal tools, RAG systems, accessibility, or where to eat next.</p>
+          <h2>Contact</h2>
+          <p>I'm happy to talk about internal tools, RAG systems and accessibility.</p>
           <div class="links">
-            <a href="mailto:katiekim@berkeley.edu">email</a>
-            <a href="https://www.linkedin.com/in/katiekim99/">linkedin</a>
-            <a href="https://github.com/katiejk99">github</a>
-            <a href="https://www.instagram.com/hungy_kt/">instagram</a>
-            <a href="Katie_Kim_Resume.pdf">resume</a>
+            <a href="mailto:katiekim@berkeley.edu">Email</a>
+            <a href="https://www.linkedin.com/in/katiekim99/">LinkedIn</a>
+            <a href="https://github.com/katiejk99">GitHub</a>
+            <a href="https://www.instagram.com/hungy_kt/">Instagram</a>
+            <a href="Katie_Kim_Resume.pdf">Resume</a>
           </div>
-          <div class="sign">— KK <svg aria-hidden="true"><use href="#banana" /></svg></div>
+          <div class="sign"><svg aria-hidden="true"><use href="#banana" /></svg></div>
         </section>
       </main>
     </div>
@@ -305,21 +287,41 @@
     <footer>© 2026 Katie Kim</footer>
 
     <script>
-      // highlight the tab for the section in view
+      // Tabs: show one section at a time, driven by the URL hash so links,
+      // the back button and bookmarks all work.
+      const sections = [...document.querySelectorAll(".paper > section")];
       const tabs = [...document.querySelectorAll(".tabs a")];
-      const io = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((e) => {
-            if (!e.isIntersecting) return;
-            tabs.forEach((t) => t.classList.toggle("on", t.getAttribute("href") === "#" + e.target.id));
-          });
-        },
-        { rootMargin: "-40% 0px -55% 0px" }
-      );
-      tabs.forEach((t) => {
-        const s = document.querySelector(t.getAttribute("href"));
-        if (s) io.observe(s);
+      const ids = sections.map((s) => s.id);
+
+      function show(id, scroll) {
+        if (!ids.includes(id)) id = ids[0];
+        sections.forEach((s) => s.classList.toggle("active", s.id === id));
+        tabs.forEach((t) => {
+          const on = t.getAttribute("href") === "#" + id;
+          t.classList.toggle("on", on);
+          if (on) {
+            t.setAttribute("aria-current", "page");
+            t.parentElement.scrollTo({ left: Math.max(0, t.offsetLeft - 24) });
+          }
+          else t.removeAttribute("aria-current");
+        });
+        if (scroll) {
+          const top = document.querySelector(".book").getBoundingClientRect().top + window.scrollY - 70;
+          if (window.scrollY > top) window.scrollTo({ top: Math.max(0, top) });
+        }
+      }
+
+      document.addEventListener("click", (e) => {
+        const a = e.target.closest('a[href^="#"]');
+        if (!a) return;
+        const id = a.getAttribute("href").slice(1);
+        if (!ids.includes(id)) return;
+        e.preventDefault();
+        if (location.hash !== "#" + id) history.pushState(null, "", "#" + id);
+        show(id, true);
       });
+      window.addEventListener("popstate", () => show(location.hash.slice(1), false));
+      show(location.hash.slice(1), false);
     </script>
   </body>
 </html>
