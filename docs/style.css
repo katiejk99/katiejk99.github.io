@@ -333,6 +333,12 @@ h3 { font-size: 26px; font-weight: 600; letter-spacing: -.01em; margin: 0; line-
 .sticky b { display: block; font-weight: 600; font-style: italic; font-size: 20px; margin-bottom: 4px; }
 .sticky p { margin: 0; font-size: 15px; line-height: 1.5; }
 
+/* off the clock: race polaroid + stickies */
+.fun { display: grid; grid-template-columns: 1fr 2fr; gap: 34px; align-items: start; }
+.fun .stickies { grid-template-columns: 1fr 1fr; }
+.polaroid.race { margin: 8px 0 0; transform: rotate(-2.5deg); }
+.polaroid.race img { aspect-ratio: 3 / 4; }
+
 /* samples (projects) */
 .samples { display: grid; grid-template-columns: repeat(3, 1fr); border: 2px solid var(--ink); background: var(--paper); }
 .sample { padding: 18px 20px; border-right: 1.5px solid var(--ink); border-bottom: 1.5px solid var(--ink); }
@@ -369,6 +375,8 @@ footer { text-align: center; font-family: var(--mono); font-size: 12px; color: v
   .hero { grid-template-columns: 1fr; }
   .specimen { max-width: 340px; margin: 10px auto 30px; }
   .about, .prov { grid-template-columns: 1fr; }
+  .fun { grid-template-columns: 1fr; }
+  .polaroid.race { max-width: 320px; margin: 8px auto 10px; }
   .stickies, .samples { grid-template-columns: 1fr 1fr; }
   .sample { border-right: 1.5px solid var(--ink) !important; border-bottom: 1.5px solid var(--ink) !important; }
   .sample:nth-child(2n) { border-right: 0 !important; }
@@ -388,7 +396,7 @@ footer { text-align: center; font-family: var(--mono); font-size: 12px; color: v
   .paper::after { left: 42px; }
   .obs { grid-template-columns: 1fr; }
   .obs .margin { border: 0; text-align: left; padding: 0 0 6px; display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; }
-  .stickies, .samples { grid-template-columns: 1fr; }
+  .stickies, .samples, .fun .stickies { grid-template-columns: 1fr; }
   .sample { border-right: 0 !important; border-bottom: 1.5px solid var(--ink) !important; }
   .sample:last-child { border-bottom: 0 !important; }
   .l1 { right: 0; top: -40px; font-size: 20px; }
