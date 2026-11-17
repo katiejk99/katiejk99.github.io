@@ -359,12 +359,19 @@ h3 { font-size: 26px; font-weight: 500; letter-spacing: .01em; margin: 0; line-h
 .sticky p { margin: 0; font-size: 15px; line-height: 1.5; }
 
 /* outside work: race photo + notes */
-.fun { display: grid; grid-template-columns: 1fr 2fr; gap: 34px; align-items: start; }
-.fun .stickies { grid-template-columns: 1fr 1fr; }
+.fun {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "race   hungry beli"
+    "race   runner lang"
+    "cello  banana mascot";
+  gap: 26px 22px;
+  align-items: start;
+}
 #skills .stickies { grid-template-columns: 1fr 1fr; }
-.photos { display: flex; flex-direction: column; gap: 34px; }
 .polaroid.race { margin: 8px 0 0; transform: rotate(-2.5deg); }
-.polaroid.banana { margin: 0; transform: rotate(2deg); }
+.polaroid.banana { margin: 6px 6px 0; transform: rotate(3deg); }
 .polaroid.banana .tape { background: color-mix(in srgb, var(--yellow) 80%, transparent); }
 .polaroid.race img { aspect-ratio: 3 / 4; }
 
@@ -415,9 +422,15 @@ footer { width: 100%; margin-top: auto; text-align: center; font-family: var(--m
 }
 
 @media (max-width: 900px) {
-  .fun { grid-template-columns: 1fr; }
-  .photos { flex-direction: row; justify-content: center; gap: 24px; }
-  .polaroid.race, .polaroid.banana { width: 46%; max-width: 280px; margin: 8px 0 10px; align-self: flex-start; }
+  .fun {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "race   hungry"
+      "race   beli"
+      "runner lang"
+      "banana cello"
+      "banana mascot";
+  }
   .stickies { grid-template-columns: 1fr 1fr; }
 }
 
@@ -459,8 +472,11 @@ footer { width: 100%; margin-top: auto; text-align: center; font-family: var(--m
   .sec-head { margin-bottom: 20px; }
 
   /* photos: smaller tilt, kept inside the content column */
-  .photos { flex-direction: column; align-items: center; gap: 26px; margin-bottom: 26px; }
-  .polaroid.race, .polaroid.banana { width: calc(100% - 16px); max-width: 300px; margin: 8px 0 0; }
+  .fun {
+    grid-template-columns: 1fr;
+    grid-template-areas: "race" "hungry" "beli" "runner" "lang" "cello" "banana" "mascot";
+  }
+  .polaroid.race, .polaroid.banana { width: calc(100% - 16px); max-width: 300px; margin: 8px auto 0; justify-self: center; }
   .polaroid { transform: rotate(1.5deg); }
   .polaroid.race { transform: rotate(-1.5deg); }
   .polaroid.banana { transform: rotate(1.5deg); }
@@ -484,7 +500,7 @@ footer { width: 100%; margin-top: auto; text-align: center; font-family: var(--m
   .js .subtabs { gap: 8px; margin: -4px 0 22px; }
   .subtabs button { font-size: 15px; padding: 6px 11px; }
 
-  .stickies, .fun .stickies, #skills .stickies { grid-template-columns: 1fr; }
+  .stickies, #skills .stickies { grid-template-columns: 1fr; }
   .sticky { transform: rotate(calc(var(--r, -1deg) / 2)); }
   .links a { margin: 4px 10px; }
 }
