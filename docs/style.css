@@ -365,14 +365,10 @@ h3 { font-size: 26px; font-weight: 500; letter-spacing: .01em; margin: 0; line-h
 .polaroid.race { margin: 8px 0 0; transform: rotate(-2.5deg); }
 .polaroid.race img { aspect-ratio: 3 / 4; }
 
-/* projects */
-.samples { display: grid; grid-template-columns: repeat(2, 1fr); border: 2px solid var(--ink); background: var(--paper); }
-.sample { padding: 18px 20px; border-right: 1.5px solid var(--ink); border-bottom: 1.5px solid var(--ink); }
-.sample:nth-child(2n) { border-right: 0; }
-.sample:nth-last-child(-n+2) { border-bottom: 0; }
-.sample h4 { font-size: 19px; font-weight: 500; margin: 4px 0 4px; }
-.sample p { margin: 0 0 6px; font-size: 15px; color: var(--soft); }
-.sample a { font-family: var(--mono); font-size: 12px; text-decoration-color: var(--peach); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+/* projects: links under a timeline entry */
+.proj-links { display: flex; flex-wrap: wrap; gap: 4px 18px; margin: 6px 0 0 24px; }
+.proj-links a { font-size: 15px; text-decoration: underline; text-decoration-color: var(--peach); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.proj-links a:hover { text-decoration-color: var(--ink); }
 
 /* Berkeley is the main entry; certifications sit below, smaller */
 .school { font-size: 32px; line-height: 1.15; }
@@ -475,10 +471,8 @@ footer { width: 100%; margin-top: auto; text-align: center; font-family: var(--m
   .js .subtabs { gap: 8px; margin: -4px 0 22px; }
   .subtabs button { font-size: 15px; padding: 6px 11px; }
 
-  .stickies, .samples, .fun .stickies, #skills .stickies { grid-template-columns: 1fr; }
+  .stickies, .fun .stickies, #skills .stickies { grid-template-columns: 1fr; }
   .sticky { transform: rotate(calc(var(--r, -1deg) / 2)); }
-  .sample, .sample:nth-child(n) { border-right: 0 !important; border-bottom: 1.5px solid var(--ink) !important; }
-  .sample:last-child { border-bottom: 0 !important; }
   .links a { margin: 4px 10px; }
 }
 
