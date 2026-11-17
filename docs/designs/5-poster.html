@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Katie Kim · Poster</title>
+<link rel="icon" href="../icons/banany.jpg" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #f8f0e0; --ink: #1d1b18; --soft: #6a6255; --rule: #1d1b18;
+    --yellow: #f3c94f; --mint: #8fc4a8; --sky: #8ccff0; --peach: #f7b38a;
+    --f: "Archivo", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--f); font-size: 17px; line-height: 1.5; font-variation-settings: "wdth" 100; }
+  a { color: inherit; }
+  .g { display: grid; grid-template-columns: repeat(12, 1fr); gap: 0 24px; max-width: 1240px; margin: 0 auto; padding: 0 32px; }
+  .wide { font-variation-settings: "wdth" 125; }
+  .narrow { font-variation-settings: "wdth" 70; }
+  .lbl { font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+
+  header.g { padding-top: 22px; padding-bottom: 14px; align-items: center; }
+  header .lbl:first-child { grid-column: 1 / 5; }
+  header nav { grid-column: 5 / 13; display: flex; justify-content: flex-end; gap: 28px; }
+  header nav a { text-decoration: none; } header nav a:hover { text-decoration: underline; text-decoration-thickness: 2px; }
+
+  /* poster hero */
+  .poster { position: relative; border-top: 3px solid var(--rule); border-bottom: 3px solid var(--rule); overflow: hidden; }
+  .poster .g { min-height: 640px; align-content: space-between; padding-top: 30px; padding-bottom: 30px; }
+  .name { grid-column: 1 / 13; font-weight: 900; font-size: clamp(64px, 15vw, 210px); line-height: .82; letter-spacing: -.045em; margin: 0; position: relative; z-index: 2; }
+  .sun { position: absolute; right: 7%; top: 50%; width: min(44vw, 520px); aspect-ratio: 1; border-radius: 50%; background: var(--yellow); transform: translateY(-38%); z-index: 0; }
+  .photo { position: absolute; right: calc(7% + min(44vw, 520px) * .18); top: 50%; width: min(26vw, 300px); aspect-ratio: 1; transform: translateY(-14%); z-index: 1; border-radius: 50%; overflow: hidden; border: 3px solid var(--ink); }
+  .photo img { width: 100%; height: 100%; object-fit: cover; }
+  .banana { position: absolute; z-index: 3; width: 110px; right: calc(7% + 10px); top: 24%; animation: spin 14s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .statement { grid-column: 1 / 7; font-size: clamp(20px, 2.2vw, 28px); line-height: 1.25; font-weight: 500; margin: 40px 0 0; position: relative; z-index: 2; }
+  .statement b { font-weight: 800; }
+  .meta { grid-column: 1 / 7; display: flex; gap: 36px; flex-wrap: wrap; margin-top: 30px; position: relative; z-index: 2; }
+  .meta div span { display: block; color: var(--soft); }
+
+  /* sections */
+  section { border-bottom: 3px solid var(--rule); padding: 56px 0; }
+  .num { grid-column: 1 / 3; font-weight: 900; font-size: 88px; line-height: .8; letter-spacing: -.05em; }
+  .sec-title { grid-column: 3 / 13; font-weight: 800; font-size: 44px; line-height: 1; letter-spacing: -.03em; margin: 0 0 36px; }
+
+  .row { grid-column: 3 / 13; display: grid; grid-template-columns: 2fr 3fr 5fr; gap: 24px; padding: 22px 0; border-top: 1.5px solid var(--rule); }
+  .row:last-child { border-bottom: 1.5px solid var(--rule); }
+  .row .yrs { font-weight: 700; }
+  .row .co { font-weight: 800; font-size: 26px; line-height: 1.05; letter-spacing: -.02em; }
+  .row .co small { display: block; font-size: 15px; font-weight: 500; color: var(--soft); letter-spacing: 0; margin-top: 6px; }
+  .row ul { margin: 0; padding: 0; list-style: none; }
+  .row li { margin: 0 0 8px; padding-left: 18px; position: relative; }
+  .row li::before { content: ""; position: absolute; left: 0; top: .55em; width: 8px; height: 8px; border-radius: 50%; background: var(--c, var(--yellow)); outline: 1.5px solid var(--ink); }
+  .row h4 { margin: 12px 0 6px; font-size: 14px; letter-spacing: .08em; text-transform: uppercase; }
+  .row h4:first-child { margin-top: 0; }
+
+  .cols { grid-column: 3 / 13; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px 24px; }
+  .cols h5 { margin: 0 0 6px; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; padding-top: 10px; border-top: 6px solid var(--c); }
+  .cols p { margin: 0; color: var(--soft); }
+  .cols p b { color: var(--ink); }
+  .cols a { font-weight: 700; }
+
+  footer .g { padding-top: 56px; padding-bottom: 70px; align-items: end; }
+  footer .big { grid-column: 1 / 9; font-weight: 900; font-size: clamp(48px, 9vw, 130px); line-height: .85; letter-spacing: -.045em; margin: 0; }
+  footer .big a { text-decoration: none; background: linear-gradient(var(--yellow), var(--yellow)) 0 88% / 100% 22% no-repeat; }
+  footer .links { grid-column: 9 / 13; display: flex; flex-direction: column; gap: 6px; text-align: right; font-weight: 700; }
+
+  @media (max-width: 860px) {
+    .g { padding: 0 18px; }
+    header nav { display: none; } header .lbl:first-child { grid-column: 1 / 13; }
+    .poster .g { min-height: 0; }
+    .sun { position: relative; grid-column: 1 / 13; width: 78%; right: auto; top: auto; transform: none; margin: 28px auto 0; justify-self: center; }
+    .photo { right: 50%; top: auto; width: 46%; transform: translate(50%, 0); margin-top: -64%; position: relative; grid-column: 1 / 13; justify-self: center; right: auto; transform: none; }
+    .banana { width: 70px; top: 40%; right: 10%; }
+    .statement, .meta { grid-column: 1 / 13; }
+    .num { grid-column: 1 / 13; font-size: 56px; margin-bottom: 8px; } .sec-title, .row, .cols { grid-column: 1 / 13; }
+    .row { grid-template-columns: 1fr; gap: 8px; }
+    .cols { grid-template-columns: 1fr; }
+    footer .big, footer .links { grid-column: 1 / 13; text-align: left; } footer .links { margin-top: 24px; }
+  }
+  @media (prefers-reduced-motion: reduce) { .banana { animation: none; } }
+</style>
+</head>
+<body>
+  <header class="g"><span class="lbl">Katie Kim — Portfolio, 2026</span><nav class="lbl"><a href="#work">Work</a><a href="#tools">Tools</a><a href="#projects">Projects</a><a href="#contact">Contact</a></nav></header>
+
+  <div class="poster">
+    <div class="sun" aria-hidden="true"></div>
+    <div class="photo"><img src="../icons/katie.jpg" alt="Katie on the phone holding a banana" /></div>
+    <svg class="banana" viewBox="0 0 64 64" aria-hidden="true"><path d="M8 34C20 44 40 40 48 20l-1-9h7l1 10C56 46 22 56 8 34Z" fill="#8fc4a8" transform="translate(3 3)"/><path d="M8 34C20 44 40 40 48 20l-1-9h7l1 10C56 46 22 56 8 34Z M25 45c7 1 14-1 18-6" fill="#fff8e6" stroke="#1d1b18" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <div class="g">
+      <h1 class="name wide">Katie<br />Kim</h1>
+      <p class="statement">Full-stack engineer. I build <b>internal platforms</b> and <b>AI tools</b> end to end — 5 years shipping production web apps, APIs and enterprise integrations at Snap and Expedia.</p>
+      <div class="meta lbl"><div>Now<span>Snap Inc.</span></div><div>Based<span>Bay Area, CA</span></div><div>Studied<span>UC Berkeley</span></div><div><a href="../Katie_Kim_Resume.pdf">Resume ↗</a><span>PDF</span></div></div>
+    </div>
+  </div>
+
+  <section id="work">
+    <div class="g">
+      <div class="num">01</div>
+      <h2 class="sec-title">Experience</h2>
+      <div class="row" style="--c: var(--yellow)">
+        <div class="yrs">2025 — Now<br /><span class="lbl" style="color:var(--soft)">Palo Alto</span></div>
+        <div class="co">Snap Inc.<small>Systems Engineer, Enterprise Engineering</small></div>
+        <ul>
+          <li>Sole engineer and PM building the IT Budget Portal, an auditable full-stack app replacing the IT org's spreadsheet-based annual budget planning; other orgs are already exploring adoption.</li>
+          <li>Delivered the NPL portal end to end in one quarter as sole engineer, replacing an unmanaged access workaround for SpecsLabs.</li>
+          <li>Tech lead for SnappyBot, a multi-agent IT-support AI live in 19 Slack channels; built its core RAG engine on Vertex AI and Gemini.</li>
+          <li>Took Glean custom actions from design to company-wide launch and built the custom connector SDK.</li>
+          <li>Led infrastructure for a self-hosted visitor and physical-access system covering ~7,000 identities.</li>
+          <li>Rebuilt the IT AI hackathon portal into a config-driven multi-event platform in under 2 weeks.</li>
+        </ul>
+      </div>
+      <div class="row" style="--c: var(--mint)">
+        <div class="yrs">2023 — 2025<br /><span class="lbl" style="color:var(--soft)">Foster City</span></div>
+        <div class="co">Stealth Biotech<small>Cloud Software Engineer</small></div>
+        <ul>
+          <li>FASTQ upload system to AWS S3 that triggers sequencing-analysis workflows from the platform UI, with archival policies that cut bucket size by over 90%.</li>
+          <li>Led IAM work on permissions, scopes and Cognito user pools, integrating AWS SES invite flows.</li>
+          <li>Automated QA with CloudWatch Agent, OpenSearch and Slack for real-time alerts and dashboards.</li>
+        </ul>
+      </div>
+      <div class="row" style="--c: var(--sky)">
+        <div class="yrs">2021 — 2023<br /><span class="lbl" style="color:var(--soft)">Seattle</span></div>
+        <div class="co">Expedia Group<small>Software Development Engineer</small></div>
+        <div>
+          <h4>Identity · 2022–23</h4>
+          <ul><li>Integrated Vrbo authentication into One Identity, launched publicly July 2023.</li><li>Cut cloud costs by automating CI/CD on serverless GitHub Actions.</li></ul>
+          <h4>Virtual Agent Control · 2022</h4>
+          <ul><li>Accessibility engineering for screen readers across devices, OSes and browsers.</li><li>Shrunk browser-test screenshots by 90% with DOM-based cropping.</li></ul>
+          <h4>Virtual Market Coach · 2021–22</h4>
+          <ul><li>Built an internal tool end to end for Expedia Partner Central.</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tools">
+    <div class="g">
+      <div class="num">02</div>
+      <h2 class="sec-title">Tools &amp; training</h2>
+      <div class="cols">
+        <div style="--c: var(--yellow)"><h5>Languages</h5><p><b>TypeScript, Python</b>, JavaScript, SQL, Go, Java, Bash, C/C++, Starlark</p></div>
+        <div style="--c: var(--mint)"><h5>AI &amp; LLM</h5><p><b>Vertex AI, Gemini</b>, Google ADK, LangChain, Ragas, MCP, Glean APIs, RAG, reranking &amp; RRF</p></div>
+        <div style="--c: var(--sky)"><h5>Frontend</h5><p><b>React</b>, React Router, Vite, HTML/CSS, Playwright, WCAG 2.2 (axe)</p></div>
+        <div style="--c: var(--peach)"><h5>Backend &amp; APIs</h5><p><b>Node.js, FastAPI</b>, Fastify, Flask, Django, gRPC, REST/OpenAPI, OAuth 2.0/JWT</p></div>
+        <div style="--c: var(--yellow)"><h5>Data &amp; cloud</h5><p><b>GCP, AWS</b>, Cloud Spanner, PostgreSQL, BigQuery, Redis, Terraform, Docker, Kubernetes</p></div>
+        <div style="--c: var(--mint)"><h5>Education</h5><p><b>UC Berkeley, 2021</b> — BA Computer Science, BA Molecular &amp; Cell Biology. Google Cloud Gemini Enterprise badge (2026), AWS Cloud Practitioner (2023).</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="g">
+      <div class="num">03</div>
+      <h2 class="sec-title">Earlier projects</h2>
+      <div class="cols">
+        <div style="--c: var(--ink)"><h5>2020 — CS184</h5><p><a href="https://katiejk99.github.io/smoke-simulator/">2D Smoke Simulator ↗</a><br />WebGL Navier-Stokes fluid sim.</p></div>
+        <div style="--c: var(--ink)"><h5>2019 — Political CS</h5><p><a href="https://github.com/PoliticalComputerScience/RollCall">Roll Call ↗</a><br />Voting blocs via graph clustering.</p></div>
+        <div style="--c: var(--ink)"><h5>2020 — SkyDeck</h5><p><b>Lunchable</b><br />COVID-era peer matching.</p></div>
+        <div style="--c: var(--ink)"><h5>2020 — SkyDeck</h5><p><b>Fibulas BioUSB</b><br />Cryopreserved sample tracker.</p></div>
+        <div style="--c: var(--ink)"><h5>2020 — PD@B</h5><p><b>Drone on Demand</b><br />Uber for drone footage.</p></div>
+        <div style="--c: var(--ink)"><h5>2018 — Political CS</h5><p><b>Engineering Activism</b><br />Legislation recommender.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="g">
+      <p class="big wide"><a href="mailto:katiekim@berkeley.edu">Say hi.</a></p>
+      <div class="links lbl"><a href="https://www.linkedin.com/in/katiekim99/">LinkedIn ↗</a><a href="https://github.com/katiejk99">GitHub ↗</a><a href="../Katie_Kim_Resume.pdf">Resume ↗</a><span style="color:var(--soft);font-weight:500;margin-top:10px">Golf · Cello · 5 languages</span></div>
+    </div>
+  </footer>
+</body>
+</html>

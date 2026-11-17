@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Katie Kim · Notebook</title>
+<link rel="icon" href="../icons/banany.jpg" />
+<link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,400;0,600;0,800;1,400&family=Karla:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --desk: #efe3cc; --paper: #fffcf4; --dot: #dccfb6; --ink: #25221e; --soft: #5f584d;
+    --yellow: #f3c94f; --mint: #8fc4a8; --sky: #8ccff0; --peach: #f7b38a;
+    --marker: "Shantell Sans", cursive; --body: "Karla", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--desk); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.6; padding: 40px 16px 60px; }
+  a { color: inherit; }
+  .book { position: relative; max-width: 900px; margin: 0 auto; }
+
+  input[name=tab] { position: absolute; opacity: 0; pointer-events: none; }
+  .tabs { position: absolute; right: -54px; top: 60px; display: flex; flex-direction: column; gap: 6px; z-index: 0; }
+  .tabs label { writing-mode: vertical-rl; font-family: var(--marker); font-weight: 600; font-size: 15px; padding: 16px 8px 16px 22px; border: 2px solid var(--ink); border-left: 0; border-radius: 0 12px 12px 0; cursor: pointer; background: var(--c); transition: transform .15s; }
+  .tabs label:hover { transform: translateX(4px); }
+
+  .paper { position: relative; z-index: 1; background-color: var(--paper); background-image: radial-gradient(var(--dot) 1.3px, transparent 1.5px); background-size: 24px 24px; border: 2px solid var(--ink); border-radius: 6px 16px 16px 6px; padding: 46px 56px 54px 92px; min-height: 640px; box-shadow: 8px 10px 0 -2px rgba(37,34,30,.18); }
+  .paper::before { content: ""; position: absolute; left: 22px; top: 18px; bottom: 18px; width: 22px; background: radial-gradient(circle at 11px 11px, var(--desk) 6px, var(--ink) 6.5px, var(--ink) 8px, transparent 8.5px) 0 0 / 22px 34px repeat-y; }
+  .paper::after { content: ""; position: absolute; left: 66px; top: 0; bottom: 0; border-left: 2px solid color-mix(in srgb, var(--peach) 75%, transparent); }
+
+  .page { display: none; animation: flip .35s ease; }
+  @keyframes flip { from { opacity: 0; transform: translateY(6px); } }
+  #t1:checked ~ .paper .p1, #t2:checked ~ .paper .p2, #t3:checked ~ .paper .p3, #t4:checked ~ .paper .p4, #t5:checked ~ .paper .p5 { display: block; }
+  #t1:checked ~ .tabs [for=t1], #t2:checked ~ .tabs [for=t2], #t3:checked ~ .tabs [for=t3], #t4:checked ~ .tabs [for=t4], #t5:checked ~ .tabs [for=t5] { transform: translateX(-6px); font-weight: 800; }
+  input:focus-visible ~ .tabs label { outline: none; }
+  #t1:focus-visible ~ .tabs [for=t1], #t2:focus-visible ~ .tabs [for=t2], #t3:focus-visible ~ .tabs [for=t3], #t4:focus-visible ~ .tabs [for=t4], #t5:focus-visible ~ .tabs [for=t5] { outline: 3px solid var(--ink); }
+
+  h1, h2 { font-family: var(--marker); font-weight: 800; letter-spacing: -.01em; }
+  h1 { font-size: clamp(40px, 6vw, 66px); line-height: 1; margin: 0 0 14px; }
+  h2 { font-size: 34px; margin: 0 0 18px; }
+  h3 { font-family: var(--marker); font-weight: 600; font-size: 22px; margin: 0; }
+  .hl { background: linear-gradient(100deg, transparent 2%, var(--yellow) 4%, var(--yellow) 96%, transparent 98%); padding: 0 4px; }
+  .hl.m { background: linear-gradient(100deg, transparent 2%, var(--mint) 4%, var(--mint) 96%, transparent 98%); }
+  .date { font-family: var(--marker); font-size: 14px; color: var(--soft); }
+
+  .intro { display: grid; grid-template-columns: 1.3fr .9fr; gap: 36px; align-items: start; }
+  .polaroid { position: relative; background: #fff; border: 2px solid var(--ink); padding: 12px 12px 46px; transform: rotate(3deg); margin-top: 10px; }
+  .polaroid img { width: 100%; aspect-ratio: 1; object-fit: cover; border: 1.5px solid var(--ink); }
+  .polaroid span { position: absolute; bottom: 10px; left: 0; right: 0; text-align: center; font-family: var(--marker); font-size: 17px; }
+  .tape { position: absolute; top: -14px; left: 50%; width: 110px; height: 28px; margin-left: -55px; background: color-mix(in srgb, var(--sky) 80%, transparent); transform: rotate(-4deg); border: 1px dashed rgba(0,0,0,.15); }
+  .todo { list-style: none; padding: 0; margin: 18px 0 0; }
+  .todo li { padding-left: 32px; position: relative; margin: 6px 0; }
+  .todo li::before { content: "✓"; position: absolute; left: 0; top: 1px; width: 20px; height: 20px; border: 2px solid var(--ink); border-radius: 4px; display: grid; place-items: center; font-family: var(--marker); font-weight: 800; font-size: 14px; line-height: 1; background: var(--mint); }
+  .todo li.open::before { content: ""; background: var(--paper); }
+
+  .entry { margin-bottom: 30px; }
+  .entry-head { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: baseline; }
+  .entry .role { font-style: italic; color: var(--soft); }
+  .entry ul { margin: 8px 0 0; padding-left: 0; list-style: none; }
+  .entry li { padding-left: 22px; position: relative; margin: 5px 0; }
+  .entry li::before { content: "•"; position: absolute; left: 4px; font-family: var(--marker); font-weight: 800; color: var(--soft); }
+  .sub { font-family: var(--marker); font-weight: 600; margin: 12px 0 0; }
+  .sub .date { margin-left: 6px; }
+
+  .sticky-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .sticky { background: var(--c); border: 2px solid var(--ink); padding: 14px 16px 18px; transform: rotate(var(--r, -1deg)); box-shadow: 3px 4px 0 rgba(37,34,30,.18); }
+  .sticky h3 { font-size: 18px; margin-bottom: 4px; }
+  .sticky p { margin: 0; font-size: 15px; }
+  .sticky a { font-family: var(--marker); font-size: 14px; font-weight: 600; }
+
+  .contact-links a { display: inline-block; font-family: var(--marker); font-weight: 600; font-size: 20px; margin: 6px 22px 6px 0; text-decoration: underline wavy var(--peach); text-underline-offset: 6px; }
+  .doodle { width: 120px; margin-top: 24px; }
+
+  @media (max-width: 760px) {
+    body { padding: 70px 10px 40px; }
+    .tabs { flex-direction: row; right: auto; left: 10px; top: -42px; overflow-x: auto; max-width: calc(100% - 10px); }
+    .tabs label { writing-mode: horizontal-tb; border-radius: 12px 12px 0 0; border: 2px solid var(--ink); border-bottom: 0; padding: 6px 12px 10px; white-space: nowrap; }
+    #t1:checked ~ .tabs [for=t1], #t2:checked ~ .tabs [for=t2], #t3:checked ~ .tabs [for=t3], #t4:checked ~ .tabs [for=t4], #t5:checked ~ .tabs [for=t5] { transform: translateY(4px); }
+    .tabs label:hover { transform: none; }
+    .paper { padding: 30px 18px 40px 56px; }
+    .paper::before { left: 10px; } .paper::after { left: 44px; }
+    .intro, .sticky-grid { grid-template-columns: 1fr; }
+    .polaroid { max-width: 240px; }
+  }
+</style>
+</head>
+<body>
+<div class="book">
+  <input type="radio" name="tab" id="t1" checked aria-label="Hello" />
+  <input type="radio" name="tab" id="t2" aria-label="Work" />
+  <input type="radio" name="tab" id="t3" aria-label="Toolbox" />
+  <input type="radio" name="tab" id="t4" aria-label="Projects" />
+  <input type="radio" name="tab" id="t5" aria-label="Contact" />
+  <div class="tabs">
+    <label for="t1" style="--c: var(--yellow)">hello</label>
+    <label for="t2" style="--c: var(--mint)">work</label>
+    <label for="t3" style="--c: var(--sky)">toolbox</label>
+    <label for="t4" style="--c: var(--peach)">projects</label>
+    <label for="t5" style="--c: var(--yellow)">say hi</label>
+  </div>
+
+  <div class="paper">
+    <!-- 1 hello -->
+    <div class="page p1">
+      <div class="intro">
+        <div>
+          <span class="date">Nov 2026 · Bay Area</span>
+          <h1>Hi, I'm Katie.</h1>
+          <p>I'm a full-stack engineer with 5 years shipping production web apps, APIs and enterprise integrations at <span class="hl">Snap</span> and <span class="hl m">Expedia</span>.</p>
+          <p>I own internal platforms end to end — from discovery and architecture through launch and production support. Right now I'm the sole engineer on Snap's IT Budget Portal and tech lead on SnappyBot, a RAG-powered IT assistant.</p>
+          <ul class="todo">
+            <li>Replace a spreadsheet with an auditable app</li>
+            <li>Ship an AI assistant people actually trust</li>
+            <li>BA CS + BA Molecular &amp; Cell Biology, UC Berkeley</li>
+            <li class="open">Your project? <a href="#" onclick="document.getElementById('t5').checked=true;return false">→ say hi</a></li>
+          </ul>
+        </div>
+        <div class="polaroid"><div class="tape"></div><img src="../icons/katie.jpg" alt="Katie on the phone holding a banana" /><span>me, taking an important call</span></div>
+      </div>
+    </div>
+
+    <!-- 2 work -->
+    <div class="page p2">
+      <h2>Work log</h2>
+      <div class="entry">
+        <div class="entry-head"><h3>Snap Inc. <span class="hl">now</span></h3><span class="date">Apr 2025 – present · Palo Alto</span></div>
+        <div class="role">Systems Engineer, Enterprise Engineering</div>
+        <ul>
+          <li>Sole engineer and PM building the IT Budget Portal, an auditable full-stack app replacing the IT org's spreadsheet-based annual budget planning; other orgs are already exploring adoption.</li>
+          <li>Delivered the NPL portal end to end in one quarter as sole engineer, replacing an unmanaged access workaround for SpecsLabs.</li>
+          <li>Tech lead for SnappyBot, a multi-agent IT-support AI live in 19 Slack channels; built its core RAG engine on Vertex AI and Gemini.</li>
+          <li>Took Glean custom actions from design to company-wide launch and built the custom connector SDK.</li>
+          <li>Led infrastructure for a self-hosted visitor and physical-access system covering ~7,000 identities.</li>
+          <li>Rebuilt the IT AI hackathon portal into a config-driven multi-event platform in under 2 weeks.</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <div class="entry-head"><h3>Stealth Biotech</h3><span class="date">Dec 2023 – Jan 2025 · Foster City</span></div>
+        <div class="role">Cloud Software Engineer</div>
+        <ul>
+          <li>FASTQ upload system to AWS S3 that triggers sequencing-analysis workflows from the platform UI; archival policies cut bucket size by over 90%.</li>
+          <li>Led IAM work on permissions, scopes and Cognito user pools, integrating AWS SES invite flows.</li>
+          <li>Automated QA with CloudWatch Agent, OpenSearch and Slack for real-time alerts and dashboards.</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <div class="entry-head"><h3>Expedia Group</h3><span class="date">Sep 2021 – Dec 2023 · Seattle</span></div>
+        <div class="role">Software Development Engineer</div>
+        <p class="sub">Identity <span class="date">Oct 2022 – Dec 2023</span></p>
+        <ul><li>Integrated Vrbo authentication into One Identity, launched publicly in July 2023.</li><li>Cut cloud costs by automating CI/CD on serverless GitHub Actions.</li></ul>
+        <p class="sub">Virtual Agent Control <span class="date">Mar – Sep 2022</span></p>
+        <ul><li>Accessibility engineering for screen readers across devices, OSes and browsers.</li><li>Shrunk browser-test screenshots by 90% with DOM-based cropping.</li></ul>
+        <p class="sub">Virtual Market Coach <span class="date">Jun 2021 – Mar 2022</span></p>
+        <ul><li>Built an internal tool end to end for Expedia Partner Central.</li></ul>
+      </div>
+      <p class="date"><a href="../Katie_Kim_Resume.pdf">full resume (pdf) →</a></p>
+    </div>
+
+    <!-- 3 toolbox -->
+    <div class="page p3">
+      <h2>Toolbox</h2>
+      <div class="sticky-grid">
+        <div class="sticky" style="--c: var(--yellow)"><h3>Languages</h3><p>TypeScript, Python, JavaScript, SQL, Go, Java, Bash, C/C++, Starlark</p></div>
+        <div class="sticky" style="--c: var(--mint); --r: 1.2deg"><h3>AI &amp; LLM</h3><p>Vertex AI (RAG + Agent Engine), Gemini, Google ADK, LangChain, Ragas, MCP, Glean APIs, reranking &amp; RRF</p></div>
+        <div class="sticky" style="--c: var(--sky); --r: -.6deg"><h3>Frontend</h3><p>React, React Router, Vite, HTML/CSS, Playwright, WCAG 2.2 (axe)</p></div>
+        <div class="sticky" style="--c: var(--peach); --r: .8deg"><h3>Backend &amp; APIs</h3><p>Node.js, Fastify, FastAPI, Flask, Django, gRPC, REST/OpenAPI, OAuth 2.0/JWT</p></div>
+        <div class="sticky" style="--c: var(--yellow); --r: -1.4deg"><h3>Data</h3><p>Cloud Spanner, PostgreSQL, BigQuery, Firestore, Redis, DynamoDB</p></div>
+        <div class="sticky" style="--c: var(--mint); --r: 1deg"><h3>Cloud &amp; infra</h3><p>GCP, AWS, Terraform, Ansible, Docker, Kubernetes, GitHub Actions, Datadog</p></div>
+      </div>
+      <p style="margin-top:28px"><b>Certs:</b> Google Cloud Gemini Enterprise skill badge (2026) · AWS Certified Cloud Practitioner (2023)<br /><b>Speaks:</b> English, Korean, French, Hindi, Spanish</p>
+    </div>
+
+    <!-- 4 projects -->
+    <div class="page p4">
+      <h2>Old projects (Berkeley era)</h2>
+      <div class="sticky-grid">
+        <div class="sticky" style="--c: var(--paper)"><h3>2D Smoke Simulator</h3><p>WebGL + Three.js Navier-Stokes fluid sim.</p><a href="https://katiejk99.github.io/smoke-simulator/">try it →</a></div>
+        <div class="sticky" style="--c: var(--paper); --r: 1deg"><h3>Roll Call</h3><p>Finding voting blocs in Congress with graph clustering.</p><a href="https://github.com/PoliticalComputerScience/RollCall">github →</a></div>
+        <div class="sticky" style="--c: var(--paper); --r: -.5deg"><h3>Lunchable</h3><p>COVID-era peer matching with auto-scheduled meetups.</p></div>
+        <div class="sticky" style="--c: var(--paper); --r: .6deg"><h3>Fibulas BioUSB</h3><p>Django tracker for cryopreserved samples.</p></div>
+        <div class="sticky" style="--c: var(--paper); --r: -1.2deg"><h3>Drone on Demand</h3><p>Uber-style demo for on-call drone footage.</p></div>
+        <div class="sticky" style="--c: var(--paper); --r: .9deg"><h3>Engineering Activism</h3><p>Recommender for relevant legislation.</p></div>
+      </div>
+    </div>
+
+    <!-- 5 contact -->
+    <div class="page p5">
+      <h2>Say hi!</h2>
+      <p>Happy to talk internal tools, RAG systems, accessibility, or a good playlist. Off the clock you'll find me golfing or playing cello.</p>
+      <div class="contact-links"><a href="mailto:katiekim@berkeley.edu">email</a><a href="https://www.linkedin.com/in/katiekim99/">linkedin</a><a href="https://github.com/katiejk99">github</a><a href="../Katie_Kim_Resume.pdf">resume</a></div>
+      <svg class="doodle" viewBox="0 0 64 64" aria-hidden="true"><path d="M8 34C20 44 40 40 48 20l-1-9h7l1 10C56 46 22 56 8 34Z" fill="#f3c94f" transform="translate(3 3)"/><path d="M8 34C20 44 40 40 48 20l-1-9h7l1 10C56 46 22 56 8 34Z M25 45c7 1 14-1 18-6" fill="none" stroke="#25221e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+  </div>
+</div>
+</body>
+</html>
