@@ -319,6 +319,7 @@ h3 { font-size: 26px; font-weight: 500; letter-spacing: .01em; margin: 0; line-h
   background: var(--c, var(--paper));
 }
 .team .sub { margin-top: 16px; }
+.team .role { margin: 0 0 4px; font-size: 16px; }
 .team:last-child .when { padding-bottom: 6px; }
 /* nested tabs (Experience: one company at a time) */
 .subtabs { display: none; }
@@ -366,10 +367,10 @@ h3 { font-size: 26px; font-weight: 500; letter-spacing: .01em; margin: 0; line-h
 .polaroid.race img { aspect-ratio: 3 / 4; }
 
 /* projects */
-.samples { display: grid; grid-template-columns: repeat(3, 1fr); border: 2px solid var(--ink); background: var(--paper); }
+.samples { display: grid; grid-template-columns: repeat(2, 1fr); border: 2px solid var(--ink); background: var(--paper); }
 .sample { padding: 18px 20px; border-right: 1.5px solid var(--ink); border-bottom: 1.5px solid var(--ink); }
-.sample:nth-child(3n) { border-right: 0; }
-.sample:nth-last-child(-n+3) { border-bottom: 0; }
+.sample:nth-child(2n) { border-right: 0; }
+.sample:nth-last-child(-n+2) { border-bottom: 0; }
 .sample h4 { font-size: 19px; font-weight: 500; margin: 4px 0 4px; }
 .sample p { margin: 0 0 6px; font-size: 15px; color: var(--soft); }
 .sample a { font-family: var(--mono); font-size: 12px; text-decoration-color: var(--peach); text-decoration-thickness: 2px; text-underline-offset: 3px; }
@@ -411,10 +412,7 @@ footer { width: 100%; margin-top: auto; text-align: center; font-family: var(--m
 @media (max-width: 900px) {
   .fun { grid-template-columns: 1fr; }
   .polaroid.race { max-width: 320px; margin: 8px auto 10px; }
-  .stickies, .samples { grid-template-columns: 1fr 1fr; }
-  .sample { border-right: 1.5px solid var(--ink) !important; border-bottom: 1.5px solid var(--ink) !important; }
-  .sample:nth-child(2n) { border-right: 0 !important; }
-  .sample:nth-last-child(-n+2) { border-bottom: 0 !important; }
+  .stickies { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 720px) {
