@@ -358,11 +358,22 @@ footer { width: 100%; margin-top: auto; text-align: center; font-family: var(--m
 @media (max-width: 720px) {
   body { font-size: 16.5px; }
   .topbar, .book { padding-left: 12px; padding-right: 12px; }
-  .book { padding-top: 12px; padding-bottom: 32px; }
+  .book { padding-top: 2px; padding-bottom: 32px; }
   .topbar .mono { display: none; }
 
   /* tabs: a wrapping row of tabs above the notebook, all visible at once */
-  .tabs { position: static; margin: 0 4px 10px; }
+  /* the tab rows stay pinned to the top of the screen while you scroll */
+  .tabs {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    margin: 0 -12px 10px;
+    padding: 10px 16px 10px;
+    background: color-mix(in srgb, var(--desk) 94%, transparent);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+  .tabs.stuck { box-shadow: 0 2px 0 rgba(37, 34, 30, .18); }
   .tabs nav { position: static; margin: 0; flex-direction: row; flex-wrap: wrap; gap: 6px; }
   .tabs a {
     writing-mode: horizontal-tb;

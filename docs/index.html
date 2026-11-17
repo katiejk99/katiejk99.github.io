@@ -328,6 +328,12 @@
       // Sections are named "tab-…" so a #hash never makes the browser jump
       // past the header; the hash only picks which tab to show.
       show(location.hash.slice(1), false);
+
+      // Phones: add a divider under the pinned tab rows once they're stuck.
+      const bar = document.querySelector(".tabs");
+      const onScroll = () => bar.classList.toggle("stuck", bar.getBoundingClientRect().top <= 0 && window.scrollY > 0);
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
     </script>
   </body>
 </html>
