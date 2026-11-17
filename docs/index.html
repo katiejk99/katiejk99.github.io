@@ -1,125 +1,475 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+﻿<!DOCTYPE html>
+<html lang="en">
   <head>
-    <script src="//code.jquery.com/jquery.min.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Katie Kim · Full-stack engineer</title>
+    <meta
+      name="description"
+      content="Katie Kim is a full-stack engineer at Snap building internal platforms and AI tools. Previously at Expedia Group."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" type="image/jpeg" href="icons/banany.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Oswald:wght@300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Caveat:wght@600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" type="text/css" href="base.css" media="screen" />
-    <link rel="icon" type="images/jpg" href="icons/banany.jpg" sizes="16x16" />
-    <title>Katie Kim</title>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <div id="nav">
-    </div>
-    <script>
-      $(function(){
-          $("#nav").load("menu/nav.html");
-      });
-      </script>
-    <div class="page-title">
-      <h1>Katie Kim</h1>
-      <div class="project1">
-        <div class="content-title">
-          <h3>About me</h3>
-        </div>
-        <hr />
-        <img
-          id="profile"
-          src="IMG_0681.CR2"
-          align="left"
-          width="30%"
-          style="padding: 0 20px 10px 0px"
+    <!-- reusable doodles -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <symbol id="sparkle" viewBox="0 0 24 24">
+        <path
+          d="M12 1.5c.9 6.4 3.7 9.6 10.5 10.5-6.8.9-9.6 4.1-10.5 10.5C11.1 16.1 8.3 12.9 1.5 12 8.3 11.1 11.1 7.9 12 1.5Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linejoin="round"
         />
-        <script>
-          var img = document.getElementById("profile");
-          img.src = "icons/IMG_0681.CR2";
-        </script>
-        <p>
-          Hi! My name is Katie and I'm a Berkeley alum. I'm graduated with a
-          double major in Compuer Science, and Molecular and Cell Biology with
-          emphasis on Biochemistry and Molecular Biology (Track 1). I often
-          introduce myself as a Korean from Canada studying in the US, but since
-          leaving Berkeley in August 2021, I feel like I've also graduated from that phrase.
-        </p>
-        <p>
-          I've been working as a Software Development Engineer at Expedia Group
-          since September 2021. I completed my rotational new grad program last
-          fall where I got to work with 2 (very) different teams for half a year
-          each. First, I was on a B2B team that suggested different types of
-          business opportunities for property managers on Expedia Partner
-          Central (surprise! who knew this portal existed?). Then, I was on the
-          front-end focused team for the virtual agent that exists throughout
-          Expedia products. (Specifically I worked a lot with accessibility
-          features).
-        </p>
-        <p>
-          I've come to really enjoy (full stack) web development, as most of my
-          previous internship projects were creating complete web applications
-          from scratch for the companies I worked for. I've also had the
-          opportunity to dabble a little bit in computer graphics through
-          coursework in Summer 2020&mdash;CS184: Foundations of Computer
-          Graphics. Through all these different experiences, I've been able to
-          make cool graphics and web development projects that you can see in my
-          <a href="projects.html">Projects</a> page, and making this website
-          itself was a fun side project I did in Fall 2020.
-        </p>
-        <p>
-          I'm also interested in projects that lie at the intersection of
-          biology and technology, and I had the opportunity to do just
-          that&mdash;as a software developer during my senior year in Berkeley
-          for <a href="http://www.fibulas.com/index.htm">Fibulas, Inc.</a>, a
-          biotech startup focussing on cryopreservation technology, at Berkeley
-          SkyDeck.
-        </p>
-        <p>
-          Outside of work, you can catch me outside playing golf, listening to
-          the same songs over and over on Spotify (check out my current
-          favourite playlist "wish i was in los angeles" on the top right
-          corner!), or watching YouTube videos on movie recaps. I also play the
-          cello and love playing in ensembles&mdash;small and large. I'll be
-          joining the South Bay Philharmonic for their upcoming concert season
-          starting in the 2023 Fall!
-        </p>
+      </symbol>
+    </svg>
+
+    <header class="site-header">
+      <div class="wrap">
+        <a class="logo" href="#top" aria-label="Katie Kim, home">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path
+              d="M8 34C20 44 40 40 48 20l-1-9h7l1 10C56 46 22 56 8 34Z"
+              fill="#f3c94f"
+              transform="translate(3 3)"
+            />
+            <path
+              d="M8 34C20 44 40 40 48 20l-1-9h7l1 10C56 46 22 56 8 34Z M25 45c7 1 14-1 18-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          Katie Kim
+        </a>
+        <nav class="nav" aria-label="Sections">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </nav>
       </div>
-      <div class="project1">
-        <div class="content-title">
-          <h3>Contact me</h3>
+    </header>
+
+    <main id="top">
+      <!-- ============ HERO ============ -->
+      <section class="hero">
+        <div class="wrap">
+          <div>
+            <p class="hello">hi, I'm Katie!</p>
+            <h1>
+              Full-stack engineer building
+              <span class="squiggle"
+                >internal platforms<svg viewBox="0 0 120 12" preserveAspectRatio="none" aria-hidden="true">
+                  <path
+                    d="M2 7c8-6 12-6 20 0s12 6 20 0 12-6 20 0 12 6 20 0 12-6 20 0 12 6 16 2"
+                    fill="none"
+                    stroke="var(--yellow)"
+                    stroke-width="7"
+                    stroke-linecap="round"
+                  /></svg></span>
+              &amp; AI tools.
+            </h1>
+            <p class="lede">
+              5 years shipping production web apps, APIs and enterprise
+              integrations at <strong>Snap</strong> and
+              <strong>Expedia</strong>. I own internal platforms end to end,
+              from discovery and architecture through launch and production
+              support.
+            </p>
+            <div class="btns">
+              <a class="btn primary" href="#experience">See my work</a>
+              <a class="btn" href="Katie_Kim_Resume.pdf" target="_blank" rel="noopener">
+                Resume
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 11l6 6 6-6M5 20h14" /></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="portrait">
+            <svg class="sparkle s1" aria-hidden="true"><use href="#sparkle" /></svg>
+            <svg class="sparkle s2" aria-hidden="true"><use href="#sparkle" /></svg>
+            <img
+              src="icons/katie.jpg"
+              alt="Katie smiling, holding a phone to one ear and a banana to the other"
+              width="640"
+              height="640"
+            />
+            <span class="note">banana phone<br />for scale</span>
+          </div>
         </div>
-        <hr />
-        <p>
-          Feel free to contact me on any of the following social media accounts:
-        </p>
-        <div align="middle" style="padding-top: 10px">
-          <ul class="linklist1">
-            <li>
-              <a href="https://www.linkedin.com/in/katiekim99/"
-                ><img src="icons/LinkedIn.svg" width="5%" /> LinkedIn</a
-              >
-            </li>
-            <li>
-              <a href="https://github.com/katiejk99"
-                ><img src="icons/Github.svg" width="5%" /> GitHub</a
-              >
-            </li>
-            <li>
-              <a href="https://www.instagram.com/maybeishouldkeepmynamethesame/"
-                ><img src="icons/insta.svg" width="5%" /> Instagram</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://open.spotify.com/user/22eeb3d7axxxid5iytu74ow5i?si=6J623Mm1RQeGdu9JnBJkDw"
-                ><img src="icons/Spotify.svg" width="5%" /> Spotify</a
-              >
-            </li>
-          </ul>
+      </section>
+
+      <!-- ============ ABOUT ============ -->
+      <section id="about">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>About</h2>
+            <span class="num">01</span>
+          </div>
+          <div class="about">
+            <div class="box a-sky">
+              <p>
+                I'm a Systems Engineer on Snap's Enterprise Engineering team in
+                Palo Alto. I like the unglamorous, high-leverage work: replacing
+                spreadsheets and access workarounds with auditable apps, and
+                turning a messy support queue into an AI assistant people
+                actually trust.
+              </p>
+              <p>
+                These days I'm the sole engineer (and PM) on Snap's IT Budget
+                Portal and the tech lead on SnappyBot, a multi-agent IT-support
+                assistant built on Vertex AI and Gemini. Before Snap, I built
+                cloud pipelines for genomic sequencing data at a biotech
+                startup, and worked on identity and accessibility at Expedia
+                Group.
+              </p>
+              <p>
+                I studied Computer Science and Molecular &amp; Cell Biology at
+                UC Berkeley, so anything where biology meets software still
+                makes me very happy.
+              </p>
+            </div>
+            <div class="box a-mint">
+              <ul class="facts">
+                <li><span class="k">Now</span><span class="v">Systems Engineer @ Snap</span></li>
+                <li><span class="k">Based in</span><span class="v">Bay Area, CA</span></li>
+                <li><span class="k">Grew up</span><span class="v">Calgary, Canada</span></li>
+                <li><span class="k">Speaks</span><span class="v">English, Korean, French, Hindi, Spanish</span></li>
+                <li><span class="k">Off-hours</span><span class="v">Golf, cello in ensembles, one song on repeat</span></li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
+
+      <!-- ============ EXPERIENCE ============ -->
+      <section id="experience">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>Experience</h2>
+            <span class="num">02</span>
+          </div>
+
+          <div class="jobs">
+            <article class="box job a-yellow">
+              <div class="job-head">
+                <h3>Snap Inc.</h3>
+                <span class="when">Apr 2025 – Present</span>
+              </div>
+              <div class="role">Systems Engineer, Enterprise Engineering</div>
+              <div class="where">Palo Alto, CA</div>
+              <ul>
+                <li>
+                  Sole engineer and PM building the <strong>IT Budget Portal</strong>, an
+                  auditable full-stack app replacing the IT org's
+                  spreadsheet-based annual budget planning; other orgs are
+                  already exploring adoption.
+                </li>
+                <li>
+                  Delivered the <strong>NPL portal</strong> end to end in one quarter as sole
+                  engineer, replacing an unmanaged access workaround for
+                  SpecsLabs.
+                </li>
+                <li>
+                  Tech lead for <strong>SnappyBot</strong>, a multi-agent IT-support AI live in
+                  19 Slack channels; built its core RAG engine on Vertex AI and
+                  Gemini.
+                </li>
+                <li>
+                  Took <strong>Glean custom actions</strong> from design to company-wide launch
+                  and built the custom connector SDK.
+                </li>
+                <li>
+                  Led infrastructure for a self-hosted visitor and
+                  physical-access system covering ~7,000 identities.
+                </li>
+                <li>
+                  Rebuilt the IT AI hackathon portal into a config-driven
+                  multi-event platform in under 2 weeks.
+                </li>
+              </ul>
+            </article>
+
+            <article class="box job a-mint">
+              <div class="job-head">
+                <h3>Stealth Biotech</h3>
+                <span class="when">Dec 2023 – Jan 2025</span>
+              </div>
+              <div class="role">Cloud Software Engineer</div>
+              <div class="where">Foster City, CA</div>
+              <ul>
+                <li>
+                  Built and optimized a system to upload FASTQ files to AWS S3
+                  and surface them in the platform UI to asynchronously trigger
+                  sequencing-analysis workflows, with archival policies that cut
+                  S3 bucket size by <strong>over 90%</strong>.
+                </li>
+                <li>
+                  Led IAM work on user permissions, scopes and Cognito user pool
+                  management, integrating AWS SES for more complex invite flows.
+                </li>
+                <li>
+                  Built automated QA systems with CloudWatch Agent, OpenSearch
+                  and Slack for real-time alerts and dashboard visualizations.
+                </li>
+              </ul>
+            </article>
+
+            <article class="box job a-sky">
+              <div class="job-head">
+                <h3>Expedia Group</h3>
+                <span class="when">Sep 2021 – Dec 2023</span>
+              </div>
+              <div class="role">Software Development Engineer</div>
+              <div class="where">Seattle, WA</div>
+
+              <p class="team">Identity <span>Oct 2022 – Dec 2023</span></p>
+              <ul>
+                <li>
+                  Integrated Vrbo authentication into the
+                  <strong>One Identity</strong> platform, launched publicly in
+                  July 2023.
+                </li>
+                <li>
+                  Reduced cloud costs by automating CI/CD build and test
+                  pipelines on serverless GitHub Actions.
+                </li>
+              </ul>
+
+              <p class="team">Virtual Agent Control <span>Mar 2022 – Sep 2022</span></p>
+              <ul>
+                <li>
+                  Specialized in accessibility engineering for seamless screen
+                  reader support across devices, operating systems and browsers.
+                </li>
+                <li>
+                  Shrunk reference screenshots for browser compatibility tests by
+                  <strong>90%</strong> with a custom DOM-based cropping function.
+                </li>
+              </ul>
+
+              <p class="team">Virtual Market Coach <span>Jun 2021 – Mar 2022</span></p>
+              <ul>
+                <li>
+                  Built an internal tool end to end for Expedia Partner Central,
+                  streamlining queries for properties and promotion types.
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SKILLS ============ -->
+      <section id="skills">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>Toolbox</h2>
+            <span class="num">03</span>
+          </div>
+          <div class="skills">
+            <div class="skill-group">
+              <h4>Languages</h4>
+              <div class="chips">
+                <span class="chip hot">TypeScript</span><span class="chip hot">Python</span><span class="chip">JavaScript</span><span class="chip">SQL</span><span class="chip">Go</span><span class="chip">Java</span><span class="chip">Bash</span><span class="chip">C/C++</span><span class="chip">Starlark</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <h4>Frontend</h4>
+              <div class="chips">
+                <span class="chip hot">React</span><span class="chip">React Router</span><span class="chip">Vite</span><span class="chip">HTML/CSS</span><span class="chip">Playwright</span><span class="chip">WCAG 2.2 (axe)</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <h4>Backend &amp; APIs</h4>
+              <div class="chips">
+                <span class="chip hot">Node.js</span><span class="chip">Fastify</span><span class="chip hot">FastAPI</span><span class="chip">Flask</span><span class="chip">Django</span><span class="chip">gRPC</span><span class="chip">REST/OpenAPI</span><span class="chip">OAuth 2.0/JWT</span><span class="chip">Pydantic</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <h4>Databases</h4>
+              <div class="chips">
+                <span class="chip">Cloud Spanner</span><span class="chip">PostgreSQL</span><span class="chip">BigQuery</span><span class="chip">Firestore</span><span class="chip">Redis</span><span class="chip">DynamoDB</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <h4>AI &amp; LLM</h4>
+              <div class="chips">
+                <span class="chip hot">Vertex AI</span><span class="chip hot">Gemini</span><span class="chip">Google ADK</span><span class="chip">LangChain</span><span class="chip">Ragas</span><span class="chip">MCP</span><span class="chip">Glean APIs</span><span class="chip">RAG, reranking &amp; RRF</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <h4>Cloud, infra &amp; CI/CD</h4>
+              <div class="chips">
+                <span class="chip hot">GCP</span><span class="chip hot">AWS</span><span class="chip">Terraform</span><span class="chip">Ansible</span><span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">GitHub Actions</span><span class="chip">Grafana</span><span class="chip">Datadog</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PROJECTS ============ -->
+      <section id="projects">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>Earlier projects</h2>
+            <span class="num">04</span>
+          </div>
+          <div class="projects">
+            <article class="box project a-yellow">
+              <h3>2D Smoke Simulator</h3>
+              <div class="meta">CS184 · Summer 2020</div>
+              <p>
+                Web-based fluid simulation in WebGL and Three.js modelling smoke
+                with the Navier-Stokes equations, with controls for colour,
+                density and temperature.
+              </p>
+              <div class="links">
+                <a href="https://katiejk99.github.io/smoke-simulator/simulation/index.html">Try it</a>
+                <a href="https://katiejk99.github.io/smoke-simulator/">Write-up</a>
+              </div>
+            </article>
+
+            <article class="box project a-mint">
+              <h3>Roll Call</h3>
+              <div class="meta">Political CS @ Berkeley · Spring 2019</div>
+              <p>
+                Found voting blocs in the US Congress by treating it as a network
+                graph and comparing Louvain and spectral clustering, fed by a
+                ProPublica data pipeline.
+              </p>
+              <div class="links">
+                <a href="https://github.com/PoliticalComputerScience/RollCall">GitHub</a>
+                <a href="https://medium.com/@roll.callv2">Blog</a>
+              </div>
+            </article>
+
+            <article class="box project a-sky">
+              <h3>Lunchable</h3>
+              <div class="meta">Berkeley SkyDeck · 2020</div>
+              <p>
+                Led a team building peer-matching for students during COVID: a
+                Python matching algorithm, automated Meet/Calendar invites, and
+                in-app chat.
+              </p>
+            </article>
+
+            <article class="box project a-peach">
+              <h3>Fibulas BioUSB</h3>
+              <div class="meta">Berkeley SkyDeck · Fall 2020</div>
+              <p>
+                Django app from scratch for tracking check-in/out of
+                cryopreserved samples, built with a client at the University of
+                Pittsburgh School of Medicine.
+              </p>
+            </article>
+
+            <article class="box project a-yellow">
+              <h3>Drone on Demand</h3>
+              <div class="meta">PD@B for HeroTech8 · Fall 2020</div>
+              <p>
+                Demo web app for an Uber-style service that sends a drone to
+                capture footage of a requested area.
+              </p>
+            </article>
+
+            <article class="box project a-mint">
+              <h3>Engineering Activism</h3>
+              <div class="meta">Political CS @ Berkeley · Fall 2018</div>
+              <p>
+                Hybrid recommender system that suggested relevant legislation
+                to Gather Activism users, served behind an API.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ EDUCATION ============ -->
+      <section id="education">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>Education</h2>
+            <span class="num">05</span>
+          </div>
+          <div class="edu">
+            <div class="box a-sky">
+              <h3>University of California, Berkeley</h3>
+              <div class="small">Class of 2021 · Berkeley, CA</div>
+              <div class="degree">
+                <div>BA Computer Science</div>
+                <div>BA Molecular and Cell Biology</div>
+              </div>
+              <details>
+                <summary>Favourite coursework</summary>
+                <ul>
+                  <li>CS186 Database Systems</li>
+                  <li>CS161 Computer Security</li>
+                  <li>CS184 Computer Graphics</li>
+                  <li>CS188 Artificial Intelligence</li>
+                  <li>DS100 Data Science</li>
+                  <li>MCB 100B Biochemistry · MCB 132 Biology of Human Cancer</li>
+                </ul>
+              </details>
+            </div>
+            <div class="box a-peach">
+              <h3>Certifications</h3>
+              <div class="cert">
+                <span class="badge">G</span>
+                <div>
+                  Google Cloud Skill Badge: Create Your First Gemini Enterprise
+                  Application
+                  <div class="small">2026</div>
+                </div>
+              </div>
+              <div class="cert">
+                <span class="badge y">AWS</span>
+                <div>
+                  AWS Certified Cloud Practitioner
+                  <div class="small">2023</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CONTACT ============ -->
+      <section id="contact">
+        <div class="wrap">
+          <div class="box contact">
+            <h2>Say hi</h2>
+            <p>
+              Always happy to chat about internal tools, RAG systems, or a good
+              playlist.
+            </p>
+            <div class="btns">
+              <a class="btn primary" href="mailto:katiekim@berkeley.edu">Email me</a>
+              <a class="btn" href="https://www.linkedin.com/in/katiekim99/">LinkedIn</a>
+              <a class="btn" href="https://github.com/katiejk99">GitHub</a>
+              <a class="btn" href="https://open.spotify.com/playlist/75pAgFPn4pellKhyNXUu0m">Spotify</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span class="hand">made with care (and bananas)</span><br />
+      © 2026 Katie Kim
+    </footer>
   </body>
 </html>
