@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- stop phones from turning dates and places into phone/map links -->
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
     <title>Katie Kim · Full-stack engineer</title>
     <meta
       name="description"
@@ -117,8 +119,13 @@
         <!-- ============ EXPERIENCE ============ -->
         <section id="tab-experience">
           <div class="sec-head"><h2>Experience</h2></div>
+          <div class="subtabs" role="tablist" aria-label="Companies">
+            <button type="button" role="tab" data-sub="snap" style="--c: var(--yellow)">Snap Inc. <span>2025 – now</span></button>
+            <button type="button" role="tab" data-sub="stealth" style="--c: var(--mint)">Stealth Biotech <span>2023 – 25</span></button>
+            <button type="button" role="tab" data-sub="expedia" style="--c: var(--sky)">Expedia Group <span>2021 – 23</span></button>
+          </div>
 
-          <article class="obs">
+          <article class="obs" data-sub="snap" role="tabpanel">
             <div class="margin">
               <div class="mono">Apr 2025 – Present</div>
               <div class="mono">Palo Alto, CA</div>
@@ -137,7 +144,7 @@
             </div>
           </article>
 
-          <article class="obs">
+          <article class="obs" data-sub="stealth" role="tabpanel">
             <div class="margin">
               <div class="mono">Dec 2023 – Jan 2025</div>
               <div class="mono">Foster City, CA</div>
@@ -153,7 +160,7 @@
             </div>
           </article>
 
-          <article class="obs">
+          <article class="obs" data-sub="expedia" role="tabpanel">
             <div class="margin">
               <div class="mono">Sep 2021 – Dec 2023</div>
               <div class="mono">Seattle, WA</div>
@@ -328,6 +335,33 @@
       // Sections are named "tab-…" so a #hash never makes the browser jump
       // past the header; the hash only picks which tab to show.
       show(location.hash.slice(1), false);
+
+      // Nested tabs (Experience): show one company at a time.
+      document.querySelectorAll(".subtabs").forEach((bar) => {
+        const section = bar.closest("section");
+        const buttons = [...bar.querySelectorAll("[data-sub]")];
+        const panels = [...section.querySelectorAll("article[data-sub]")];
+        const pick = (key) => {
+          buttons.forEach((b) => {
+            const on = b.dataset.sub === key;
+            b.classList.toggle("on", on);
+            b.setAttribute("aria-selected", on);
+            b.tabIndex = on ? 0 : -1;
+          });
+          panels.forEach((p) => p.classList.toggle("active", p.dataset.sub === key));
+        };
+        buttons.forEach((b, i) => {
+          b.addEventListener("click", () => pick(b.dataset.sub));
+          b.addEventListener("keydown", (e) => {
+            const step = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+            if (!step) return;
+            const next = buttons[(i + step + buttons.length) % buttons.length];
+            next.focus();
+            pick(next.dataset.sub);
+          });
+        });
+        pick(buttons[0].dataset.sub);
+      });
 
       // Phones: add a divider under the pinned tab rows once they're stuck.
       const bar = document.querySelector(".tabs");
